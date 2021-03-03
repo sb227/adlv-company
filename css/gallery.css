@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* gallery .css - 갤러리 페이지 css */
+
+/* 파일 merging(합치기) */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+
+.gallery {
+    background: #eee;
+    overflow: hidden;
+}
+
+.lightbox{
+    z-index: 1000000000 !important;
+}
+/******************* 중앙 텍스트 *******************/
+#text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 200;
+    font-size: 30vmin;
+    color: #333;
+    z-index: 1;
+    cursor: default;
+}
+
+#text:hover{
+    z-index: 0;
+}
+/********************** 사진 *****************/
+#photo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#photo li{
+    position: relative;
+    margin: 0 5%;
+    transition: all 0.4s ease-out;
+}
+
+#photo li a{
+    display: block;
+}
+
+#photo img {
+    width: 50vmin;
+    display: block;
+}
+
+#photo li:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    z-index: 3;
+}
+
+#photo li:nth-child(3n){
+    z-index: 3;
+}
+
+#footer{
+    display: none;
+}
+
+/****************** 미디어쿼리 ******************/
+@media only screen and (max-width:1024px) {
+    #photo {
+        top: 10vmin;
+    }
+}
+
+/* 미디어쿼리 1024 */
+
+
+@media only screen and (max-width:800px) {
+    #footer{
+        display: block;
+    }
+
+    #photo {
+        top: 0;
+    }
+
+    #text {
+        display: none;
+    }
+    
+    #photo{
+        padding-top: 20vmin;
+        width: 100%; 
+        height: auto;
+        flex-wrap: wrap;
+    }
+    
+    #photo li {
+        position: static;
+        transform: scale(1);
+        top: auto;
+        left: auto;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 10vmin;
+        box-shadow: 0 0 0;
+    }
+
+    #photo img:hover {
+        transform: scale(1);
+    }
+
+    #photo img {
+        width: 80vmin;
+        box-shadow: none;
+    }
+}
+
+/* 미디어쿼리 500 */
+
+/************* 갤러리 리스트  ***********************************************************************************************************************************************/
+.gallery_wrap{
+    display: flex;
+    position: relative;
+    height: 100%;
+}
+
+.gallery_area{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 5%;
+    display: flex;
+}
+
+.gallery_wrap ul{
+    width: 50%;
+}
+
+.gallery_list_wrap{
+    padding-left: 10%;
+}
+
+.gallery_list_wrap li{
+    width: 100%;
+    font-size: 3vmin;
+    font-weight: 800;
+    line-height: 2;
+    font-family: 'NanumSquare', sans-serif
+}
+
+.gallery_info_tit{
+    font-size: 3vmin;
+    font-weight: 800;
+    line-height: 2;
+}
+
+
+.gallery_list_info_wrap img{
+    width: 100%;
+}
+
+
+
+

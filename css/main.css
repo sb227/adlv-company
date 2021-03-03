@@ -1,0 +1,479 @@
+@charset "utf-8";
+/* main.css - 메인페이지 css */
+
+/* 파일 merging(합치기) */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+/*****************************************************************/
+/*****************************************************************/
+
+/*0. 메인페이지*/
+.top {
+    position: relative;
+    /*부모자격*/
+    overflow: hidden;
+}
+
+/*슬라이드*/
+.slide {
+    position: absolute;
+    left: 0;
+    width: 300%;
+    height: 100%;
+}
+
+.slide li {
+    width: 33.33333%;
+    height: 100%;
+    position: relative;
+}
+
+#slide1 {
+    background: url(../images/bg1.jpg) no-repeat center/cover;
+}
+
+#slide2 {
+    background: url(../images/bg2.jpg) no-repeat 50% 35%/cover;
+}
+
+#slide3 {
+    background: url(../images/bg3.jpg) no-repeat 50% 10%/cover;
+}
+
+.slide span{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+.main_txt{
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    font-size: 80px;
+    line-height: 1.4;
+    font-weight: 800;
+    bottom: 5%;
+    left: 3%;
+}
+
+
+/*****************************************************************/
+
+/* 컨텐츠 시작 */
+.main_content_wrap {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.main_cont_img_wrap{
+    width: 60%;
+}
+
+
+.main_cont_img_wrap img{
+    width: 100%;
+}
+
+/* 텍스트 영역 */
+.main_content_text_wrap {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    text-align: right;
+    padding-right: 2%;
+}
+
+/* 제목 */
+.main_content_title {
+    font-size: 4vmin;
+    line-height: 1.4;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 제목 멘트 */
+.main_content_sub {
+    font-size: 2vmin;
+    color: #444;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 2% 0;
+}
+
+/* 시놉시스 */
+.main_content_text {
+    color: #999;
+    font-size: 1em;
+}
+
+.second .main_content_text_wrap{
+    text-align: left;
+    width: 70%;
+    padding-right: 0;
+    padding-left: 2%;
+}
+
+.second .main_content_title{
+    font-size: 2.3vmin;
+}
+
+.second .main_content_text{
+    margin-top: 3%;
+    font-size: 1.6vmin;
+    line-height: 1.4;
+}
+
+.second .main_cont_img_wrap{
+    width: 30%;
+}
+
+.third .main_cont_img_wrap, .third .main_content_text_wrap{
+    width: 50%;
+}
+
+.third .main_cont_img_wrap{
+    display: flex;
+}
+
+.ceo_wrap{
+    text-align: center;
+}
+
+.ceo_wrap p{
+    margin-top: 5%;
+    font-size: 2vmin;
+    font-weight: 800;
+}
+
+.third .main_content_text_wrap{
+    text-align: left;
+    padding-right: 0;
+    padding-left: 2%;
+}
+
+.third .main_content_text{
+    color: #000;
+    line-height: 1.7;
+    font-size: 1.8vmin;
+    font-weight: 500;
+}
+
+.fourth .main_cont_img_wrap{
+    width: 35%;
+    display: flex;
+    align-items: center;
+}
+
+
+.fourth .main_content_text_wrap{
+    width: 65%;
+    text-align: left;
+    padding-right: 2%;
+}
+
+.fourth .main_content_text{
+    color: #000;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+.hidden_txt_img_wrap{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.hidden_tag_icon{
+    width: 15%;
+    margin-right: 5%;
+}
+
+.hidden_txt_img_wrap p{
+    font-size: 3.5vmin;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+
+.fifth .main_content_text_wrap{
+    width: 100%;
+}
+
+.global_text_wrap{
+	text-align:center;
+    color: #000;
+    line-height: 1.7;
+}
+
+
+.global_text_wrap h2{
+    font-weight:600;
+    font-size: 2vmin;
+}
+
+.global_text_wrap h1{
+    font-weight:800;
+    font-size: 5vmin;
+    margin-bottom: 2%;
+}
+
+
+.global_text_wrap p{
+	margin-bottom:2%;
+}
+
+.global_blod{
+    font-weight: 800;
+    font-size: 1.8vmin;
+}
+
+
+
+.global_blod a:hover{
+    border-bottom: 1px solid #000;
+}
+
+.blue_txt{
+	color: blue;    
+}
+
+.bold_txt{
+	font-weight:800;    
+}
+
+/******************************************************************/
+/* 2. 브랜드 스토리 */
+.cont2 {
+    background: url(../images/bg4.jpg) no-repeat center/cover;
+    color: #fff;
+    position: relative;
+}
+
+.cont2 > span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.ct2::before {
+    background-color: #fff;
+}
+
+.cont2 .main_info_wrap {
+    padding-top: 15%;
+}
+
+.main_info_area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.main_info_area li{
+    float: none;
+    width: 33.33%;
+}
+
+.company_img_box{
+    width: 15%;
+    margin-bottom: 5%;
+}
+
+.company_img_box img{
+    width: 100%;
+}
+
+.company_info_tit{
+    font-size: 3em;
+    margin-bottom: 10%;
+    font-weight: 800;
+}
+
+.company_info_box{
+    font-size: 1.3em;
+    line-height: 1.4;
+}
+
+
+@media only screen and (max-width:1280px) {
+    
+
+    .main_cont_img_wrap, .main_content_text_wrap{
+        width: 50%;
+    }
+
+    .main_content_text_wrap {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+}
+
+@media only screen and (max-width:1024px) {
+    .main_content_text_wrap {
+        padding-left: 10%;
+        font-size: 12px;
+    }
+
+    .company_info_box{
+        font-size: 13px;
+    }
+
+    .third .main_content_text{
+        font-size: 1.5vmin;
+    }
+
+    .footer_sns p{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .slide {
+        position: relative;
+    }
+   
+    .main_content_wrap{
+        flex-wrap: wrap-reverse;
+    }
+
+    .second.main_content_wrap{
+        flex-wrap: wrap;
+    }
+
+    .main_info_wrap {
+        padding-top: 0;
+    }
+
+    .footer_left {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .main_content_text_wrap {
+        text-align: center;
+        padding: 0;
+        margin: 5% 0;
+    }
+
+    .second .main_content_text_wrap{
+        width: 60%;
+    }
+
+    .second .main_content_title{
+        font-size: 2vmin;
+    }
+    
+    .third.main_content_wrap, .fourth.main_content_wrap{
+        flex-wrap: wrap;
+    }
+
+    .third .main_cont_img_wrap, .third .main_content_text_wrap, .fourth .main_cont_img_wrap, .fourth .main_content_text_wrap{
+        width: 100%;
+    }
+
+    .third .main_cont_img_wrap{
+        height: 50%;
+        transform: scale(.8);
+    }
+
+    .fourth .main_cont_img_wrap img{
+        width: 80%;
+        margin: 5% auto;
+        display: block;
+    }
+
+    .main_content_title {
+        font-size: 2em;
+    }
+
+    .main_content_sub {
+        font-size: 1em;
+        line-height: 1.4;
+        margin-bottom: 3%;
+    }
+
+    .cont2 .main_info_wrap{
+        position: relative;
+        padding: 5% 0;
+    }
+
+    .main_info_area li{
+        margin: 3% 0;
+    }
+
+    .main_cont_img_wrap{
+        display: flex;
+        align-items: center;
+    }
+    
+    .mob_company_box{
+        display: flex;
+        align-items: center;
+    }
+
+    .company_info_tit{
+        font-size: 2em;
+        margin-bottom: 8%;
+        margin-left: 2%;
+    }
+    
+}
+
+@media only screen and (max-width: 500px) {
+    .main_txt{
+        font-size: 40px;
+    }
+
+    .main_info_box {
+        width: 100%;
+        margin: 0 auto;
+        padding: 10% 0;
+    }
+
+    .second .main_cont_img_wrap{
+        width: 100%;
+    }
+
+    .second .main_content_text_wrap {
+        width: 100%;
+    }
+
+    .second .main_content_title {
+        font-size: 1.5em;
+    }
+
+    .main_info_area{
+        flex-wrap: wrap;
+    }
+
+    .main_info_area li{
+        width: 100%;
+    }
+
+    .company_info_tit{
+        font-size: 16px;
+    }
+
+    .company_info_box{
+        font-size: 12px;
+    }
+
+    .company_img_box{
+        width: 10%;
+    }
+}

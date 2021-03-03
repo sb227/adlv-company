@@ -1,0 +1,147 @@
+@charset "utf-8";
+/* collab.css - 콜라보 css */
+
+/* 파일 merging(합치기) */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+.cont_wrap{
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cont_wrap .left{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cont_wrap .right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+/* 콜라보 영역 왼쪽 */
+
+.collab_img_wrap{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 60%;
+}
+
+.collab_img_wrap img{
+    width: 50%;
+}
+
+.collab_txt_wrap{
+    padding-top: 5%;
+    width: 100%;
+    text-align: center;
+    height: 40%;
+    margin: 0 auto;
+}
+
+.collab_link{
+    display: block;
+    font-family: 'NanumSquare', sans-serif;
+    border: 1px solid #000;
+    border-radius: 50px;
+    width: 20%;
+    margin: 3% auto 0 auto;
+    padding: 1% 0;
+    transition: .4s;
+    font-size: 12px;
+}
+
+.collab_link:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* 콜라보 영역 오른쪽 */
+.product_swiper{
+    width: 80%;
+}
+
+.product_swiper img{
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 콜라보 선택 */
+.select_collab_wrap {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.select_collab_area {
+    cursor: pointer;
+}
+
+.select_collab {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    padding: 3px;
+    border-radius: 50% 50%;
+    margin: 0 auto;
+}
+
+.select_collab_area:last-child {
+    margin: 0;
+}
+
+.select_collab.active {
+    border: 1px dashed #000;
+}
+
+.select_collab img {
+    width: 100%;
+    border-radius: 50% 50%;
+}
+
+.select_collab_text {
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+
+@media only screen and (max-width:1280px) {
+    .cont_wrap{
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .cont_wrap{
+        height: 50%;
+    }
+
+    .mob_swiper{
+        padding: 0 5%;
+        margin-top: 10%;
+    }
+}
+
+@media only screen and (max-width:800px) {
+
+}
+
+@media only screen and (max-width:768px) {
+    
+}
+
+@media only screen and (max-width:500px) {
+    
+}

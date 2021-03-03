@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* collab.css - 콜라보 css */
+
+/* 파일 merging(합치기) */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+#page1{
+    background: url(../images/artwork-bf/bf-bg.png) no-repeat center bottom/cover;
+}
+
+.bf_cont_wrap.at{
+    text-align: left;
+}
+
+#page2{
+    background: url(../images/artwork-bf/at-bg.png) no-repeat center bottom/cover;
+}
+
+.bf_cont_wrap{
+    height: 100%;
+    line-height: 1.5;
+    text-align: right
+}
+
+.bf_tit{
+    font-size: 8vmin;
+    font-weight: 600;
+}
+
+.bf_sub_tit{
+    font-size: 4vmin;
+}
+
+.bf_sub_tit span{
+    font-size: 4.5vmin;
+}
+
+.bf_txt{
+    padding-top: 2%;
+    font-size: 2vmin;
+}
+
+.bf_link{
+    display: block;
+    text-align: right;
+    width: 8%;
+    margin-left: auto;
+    font-family: 'NanumSquare', sans-serif;
+    border: 1px solid #000;
+    border-radius: 50px;
+    margin-top: 1%;
+    transition: .4s;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.at .bf_link{
+    margin-left: 0;
+}
+
+
+.bf_link:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+#page3{
+    background: url(../images/artwork-bf/lg-bg.png) no-repeat center bottom/cover;
+}
