@@ -11,14 +11,14 @@ $(document).ready(function (e) {
             scrollTop: 0
         }, 800, "easeOutSine");
         pno = 0;
+
+        $(".fixed_wrap, .circle_wrap").addClass("on");
     }); //////// top 버튼 클릭 ///////
 
     if(mob){
         $(".mob_menu_btn").click(function(){
             $(".mob_menu_wrap").toggleClass('active');
             $(".mob_menu_btn").toggleClass('active');
-
-            $('.fixed_wrap').toggleClass('on');
         }); /////////// click ///////////
     }
 }); ///////////////////////////// JQB /////////////////////////////

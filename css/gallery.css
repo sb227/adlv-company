@@ -8,7 +8,6 @@
 
 
 .gallery {
-    background: #eee;
     overflow: hidden;
 }
 
@@ -130,7 +129,7 @@
 .gallery_area{
     width: 50%;
     margin: 0 auto;
-    margin-top: 5%;
+    margin-top: 10%;
     display: flex;
 }
 
@@ -147,7 +146,6 @@
     font-size: 3vmin;
     font-weight: 800;
     line-height: 2;
-    font-family: 'NanumSquare', sans-serif
 }
 
 .gallery_info_tit{

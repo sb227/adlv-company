@@ -358,6 +358,7 @@ body {
 
     .gnb_wrap {
         display: none;
+        width: 100%;
     }
 
     .mob_menu_wrap,

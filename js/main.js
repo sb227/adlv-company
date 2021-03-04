@@ -58,11 +58,28 @@ $(document).ready(function (e) {
 				scrollTop: (winH * pno) + "px"
 			}, 800, "easeOutSine"); //// animate /////////////////
 
-			// 페이지 이동과 동시에 실행
 			setTimeout(pageAction, 800);
-
-			$(".indicator_area a").eq(pno).parent().addClass("on").siblings().removeClass("on");
-
-
 		}); ////////////////// mousewheel //////////////////////////
+
+		
 }); ///////////제이쿼리 구역///////////
+
+/*//////////////////////////////////////////////
+    함수명: pageAction
+    기능: 페이지별 액션 셋팅
+*/ //////////////////////////////////////////////
+function pageAction() {
+	console.log("페이지액션");
+	// 모바일일때 작동막기
+	if (mob) return true;
+
+	if (pno === 4 ) {
+		$(".fixed_wrap, .circle_wrap").removeClass("on");
+	} else if(pno === 1 || pno === 2|| pno === 3|| pno === 5){
+		$(".fixed_wrap, .circle_wrap").addClass("on");
+	}
+
+
+} ////// pageAction 함수 //////////////////////////////////
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////

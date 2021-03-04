@@ -1,7 +1,7 @@
 // 콜라보 js
 var mob = 0; //0-모바일 아님, 1-모바일
 if ($(window).width() <= 800) {
-    mob = 1;
+	mob = 1;
 }
 
 // 1. 페이지 번호
@@ -15,9 +15,9 @@ var psts = 0; //( 0은 허용 1은 불허용 )
 var winH = $(window).height();
 
 $(function () {
-    $(".fixed_wrap, .circle_wrap").addClass("on");
+	// $(".fixed_wrap, .circle_wrap").addClass("on");
 
-    $(document).on("mousewheel DOMMouseScroll",
+	$(document).on("mousewheel DOMMouseScroll",
 		function (e) {
 			// 모바일일때 작동막기
 			if (mob) return true;
@@ -60,5 +60,17 @@ $(function () {
 
 		}); ////////////////// mousewheel //////////////////////////
 
+	$(".circle_wrap").click(function () {
+		$("#wrap").animate({
+			scrollTop: 0
+		}, 800, "easeOutSine");
+		pno = 0;
+	}); //////// top 버튼 클릭 ///////
 
+	if (mob) {
+		$(".mob_menu_btn").click(function () {
+			$(".mob_menu_wrap").toggleClass('active');
+			$(".mob_menu_btn").toggleClass('active');
+		}); /////////// click ///////////
+	}
 }); //////////// jqb///////////////////////////
