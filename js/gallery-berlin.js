@@ -46,7 +46,7 @@ $(function () { ////////////////// JQB ////////////
     } ////// for문 ////////
 
      // 이미지 뿌리기 - Berlin
-     for (var i = 1; i < 21; i++) {
+     for (var i = 1; i < 33; i++) {
         $("#photo.berlin").append("<li class='galimg" + i + "'><a href='images/lookbook/Berlin/berlin" + i + ".jpg' data-lightbox='view'><img src='images/lookbook/Berlin/berlin" + i + ".jpg'></a></li>");
     } ////// for문 ////////
 
