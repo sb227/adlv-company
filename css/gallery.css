@@ -93,7 +93,7 @@
 
 #photo li{
     position: relative;
-    margin: 0 5%;
+    padding: 0 5%;
     transition: all 0.4s ease-out;
 }
 
@@ -118,6 +118,14 @@
 
 #footer{
     display: none;
+}
+
+.berlin .galimg12{
+    transform: scale(0.8);
+}
+
+.berlin .galimg12:hover{
+    transform: scale(0.82) !important;
 }
 
 /****************** 미디어쿼리 ******************/

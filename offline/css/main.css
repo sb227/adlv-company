@@ -168,8 +168,14 @@
     transform: translate(-50%, -50%); */
 }
 
+
+.showroom .swiper-container {
+    height: 500px;
+}
+
 .showroom .market_img img{
     width: auto;
+    height: 100%;
 }
 
 .new_market_txt {

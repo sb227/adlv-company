@@ -12,7 +12,7 @@ console.log("모바일코드:" + mob);
 // 1. 페이지 번호
 var pno = 0;
 // 2. 전체 페이지 수 
-const totnum = 6;
+const totnum = 5;
 // const 는 변수 var와 달리 변경 불가한 상수를 말한다 
 // 3. 광스크롤 방지
 var psts = 0; //( 0은 허용 1은 불허용 )
@@ -24,24 +24,24 @@ var winH = $(window).height();
 $(document).ready(function (e) {
 	$(".fixed_wrap, .circle_wrap, .indicator_wrap").addClass("on");
 	$(".indicator_area a").click(function (e) {
-        e.preventDefault();
-        var idx = $(this).parent().index();
+		e.preventDefault();
+		var idx = $(this).parent().index();
 
-        pno = idx;
+		pno = idx;
 
-        var pid = $(this).attr("href");
-        console.log(pid);
+		var pid = $(this).attr("href");
+		console.log(pid);
 
-        var pgpos = $(pid).offset().top;
-        console.log(pgpos);
+		var pgpos = $(pid).offset().top;
+		console.log(pgpos);
 
-        $("#wrap").animate({
-            scrollTop: (winH * pno) + "px"
-        }, 800, "easeOutSine"); //// animate /////////////////
+		$("#wrap").animate({
+			scrollTop: (winH * pno) + "px"
+		}, 800, "easeOutSine"); //// animate /////////////////
 
 		// 페이지 이동과 동시에 실행
-        setTimeout(pageAction, 800);
-        $(this).parent().addClass("on").siblings().removeClass("on");
+		setTimeout(pageAction, 800);
+		$(this).parent().addClass("on").siblings().removeClass("on");
 	}); ///////////////////// indicator_area /////////////////
 
 	$(document).on("mousewheel DOMMouseScroll",
@@ -83,7 +83,18 @@ $(document).ready(function (e) {
 			$(".indicator_area a").eq(pno).parent().addClass("on").siblings().removeClass("on");
 		}); ////////////////// mousewheel //////////////////////////
 
-		
+	// $('.lang_btn li').click(function(){
+	// 	var idx = $(this).index();
+	// 	$('.lang_btn li').removeClass('active');
+	// 	$(this).addClass('active');
+
+	// 	if(idx){
+	// 		$('.eng, .kor').addClass('active')
+	// 	} else{
+	// 		$('.eng, .kor').removeClass('active')
+	// 	}
+	// }); /////////////////// 언어 /////////////
+
 }); ///////////제이쿼리 구역///////////
 
 /*//////////////////////////////////////////////
@@ -95,7 +106,7 @@ function pageAction() {
 	// 모바일일때 작동막기
 	if (mob) return true;
 
-	if (pno === 4 ) {
+	if (pno === 3) {
 		$(".fixed_wrap, .circle_wrap, .indicator_wrap").removeClass("on");
 	} else {
 		$(".fixed_wrap, .circle_wrap, .indicator_wrap").addClass("on");

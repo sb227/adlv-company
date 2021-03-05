@@ -36,6 +36,10 @@ body {
     display: none;
 }
 
+
+.fixed_wrap.on .lang_btn li{
+    color: #000;
+}
 /* 인디케이터 */
 .indicator_wrap.on .indicator_area li.on .indicator_circle,
 .indicator_wrap.on .indicator_area li:hover .indicator_circle {
@@ -109,6 +113,31 @@ body {
     opacity: 1;
 }
 
+
+/* 언어 버튼 */
+
+.lang_btn{
+    display: none;
+    margin-right: 20px;
+}
+
+.lang_btn::after{
+    content: none;
+}
+
+.lang_btn li{
+    width: 50%;
+    float: none;
+    cursor: pointer;
+    padding-left: 10px;
+    text-align: right;
+    color: #fff;
+}
+
+
+.lang_btn li.active{
+   font-weight: 800;
+}
 
 
 
@@ -247,6 +276,10 @@ body {
 
 .sub_gnb_wrap li {
     width: 100%;
+}
+
+.header_right{
+    display: flex;
 }
 
 .header_right a {
