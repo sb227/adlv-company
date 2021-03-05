@@ -35,11 +35,11 @@
 }
 
 #slide2 {
-    background: url(../images/bg2.jpg) no-repeat 50% 35%/cover;
+    background: url(../images/bg2.jpg) no-repeat 50% 20%/cover;
 }
 
 #slide3 {
-    background: url(../images/bg3.jpg) no-repeat 50% 10%/cover;
+    background: url(../images/bg3.jpg) no-repeat 50% 35%/cover;
 }
 
 .slide span{

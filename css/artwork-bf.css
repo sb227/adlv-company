@@ -67,7 +67,7 @@
 
 .bf_link{
     display: block;
-    width: 12%;
+    width:100px;
     font-family: 'NanumSquare', sans-serif;
     border: 1px solid #fff;
     border-radius: 50px;

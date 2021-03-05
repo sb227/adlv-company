@@ -16,6 +16,25 @@ var winH = $(window).height();
 
 $(function () {
 	// $(".fixed_wrap, .circle_wrap").addClass("on");
+	$(".indicator_area a").click(function (e) {
+        e.preventDefault();
+        var idx = $(this).parent().index();
+
+        pno = idx;
+
+        var pid = $(this).attr("href");
+        console.log(pid);
+
+        var pgpos = $(pid).offset().top;
+        console.log(pgpos);
+
+        $("#wrap").animate({
+            scrollTop: (winH * pno) + "px"
+        }, 800, "easeOutSine"); //// animate /////////////////
+
+		// 페이지 이동과 동시에 실행
+        $(this).parent().addClass("on").siblings().removeClass("on");
+	}); ///////////////////// indicator_area /////////////////
 
 	$(document).on("mousewheel DOMMouseScroll",
 		function (e) {
@@ -53,10 +72,7 @@ $(function () {
 			}, 800, "easeOutSine"); //// animate /////////////////
 
 			// 페이지 이동과 동시에 실행
-			setTimeout(pageAction, 800);
-
 			$(".indicator_area a").eq(pno).parent().addClass("on").siblings().removeClass("on");
-
 
 		}); ////////////////// mousewheel //////////////////////////
 
@@ -65,6 +81,8 @@ $(function () {
 			scrollTop: 0
 		}, 800, "easeOutSine");
 		pno = 0;
+
+		$(".indicator_area li").removeClass("on").first().addClass("on");
 	}); //////// top 버튼 클릭 ///////
 
 	if (mob) {

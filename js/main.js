@@ -22,7 +22,28 @@ var winH = $(window).height();
 //////////// 전역변수 ////////////////
 
 $(document).ready(function (e) {
-	$(".fixed_wrap, .circle_wrap").addClass("on");
+	$(".fixed_wrap, .circle_wrap, .indicator_wrap").addClass("on");
+	$(".indicator_area a").click(function (e) {
+        e.preventDefault();
+        var idx = $(this).parent().index();
+
+        pno = idx;
+
+        var pid = $(this).attr("href");
+        console.log(pid);
+
+        var pgpos = $(pid).offset().top;
+        console.log(pgpos);
+
+        $("#wrap").animate({
+            scrollTop: (winH * pno) + "px"
+        }, 800, "easeOutSine"); //// animate /////////////////
+
+		// 페이지 이동과 동시에 실행
+        setTimeout(pageAction, 800);
+        $(this).parent().addClass("on").siblings().removeClass("on");
+	}); ///////////////////// indicator_area /////////////////
+
 	$(document).on("mousewheel DOMMouseScroll",
 		function (e) {
 			// 모바일일때 작동막기
@@ -59,6 +80,7 @@ $(document).ready(function (e) {
 			}, 800, "easeOutSine"); //// animate /////////////////
 
 			setTimeout(pageAction, 800);
+			$(".indicator_area a").eq(pno).parent().addClass("on").siblings().removeClass("on");
 		}); ////////////////// mousewheel //////////////////////////
 
 		
@@ -74,11 +96,10 @@ function pageAction() {
 	if (mob) return true;
 
 	if (pno === 4 ) {
-		$(".fixed_wrap, .circle_wrap").removeClass("on");
-	} else if(pno === 1 || pno === 2|| pno === 3|| pno === 5){
-		$(".fixed_wrap, .circle_wrap").addClass("on");
+		$(".fixed_wrap, .circle_wrap, .indicator_wrap").removeClass("on");
+	} else {
+		$(".fixed_wrap, .circle_wrap, .indicator_wrap").addClass("on");
 	}
-
 
 } ////// pageAction 함수 //////////////////////////////////
 /////////////////////////////////////////////////

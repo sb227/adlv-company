@@ -12,7 +12,9 @@ $(document).ready(function (e) {
         }, 800, "easeOutSine");
         pno = 0;
 
-        $(".fixed_wrap, .circle_wrap").addClass("on");
+        $(".fixed_wrap, .circle_wrap, .indicator_wrap").addClass("on");
+        $(".indicator_area li").removeClass("on").first().addClass("on");
+
     }); //////// top 버튼 클릭 ///////
 
     if(mob){

@@ -36,6 +36,82 @@ body {
     display: none;
 }
 
+/* 인디케이터 */
+.indicator_wrap.on .indicator_area li.on .indicator_circle,
+.indicator_wrap.on .indicator_area li:hover .indicator_circle {
+    background-color: #000;
+    border: 1px solid #000;
+}
+
+.indicator_wrap.on .indicator_circle {
+    border: 1px solid #000;
+}
+
+.indicator_wrap.on .indicator_area.on .indicator_none,
+.indicator_wrap.on .indicator_area li:hover .indicator_none {
+    opacity: 1;
+}
+
+.indicator_wrap {
+    position: fixed;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+    z-index: 99999;
+}
+
+.indicator_area {
+    width: 200px;
+}
+
+.indicator_area a {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.indicator_area li {
+    position: relative;
+    width: 100%;
+    height: 20px;
+}
+
+/* 사이드바 원 */
+.indicator_circle {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    transition: all .4s;
+    z-index: 1;
+}
+
+/* 사이드바 글씨 */
+.indicator_none {
+    opacity: 0;
+    padding-right: 15px;
+    text-align: right;
+    transition: all .4s;
+}
+
+/* 사이드 인디케이터 온(활성화) */
+.indicator_area li.on .indicator_circle,
+.indicator_area li:hover .indicator_circle {
+    background-color: #fff;
+}
+
+.indicator_area li.on .indicator_none,
+.indicator_area li:hover .indicator_none {
+    opacity: 1;
+}
+
+
+
+
 /* 탑버튼 */
 .circle_wrap {
     position: fixed;
