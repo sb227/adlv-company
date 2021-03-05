@@ -30,6 +30,60 @@
 #text:hover{
     z-index: 0;
 }
+
+.move_wheel{
+    position: fixed;
+    left: 50%;
+    bottom: 7%;
+    transform: translateX(-50%);
+    color: #333;
+    z-index: 5;
+    cursor: default;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.mouse_box{
+    position: fixed;
+    right: -50%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mouse{
+    display: block;
+    width: 27%;
+    height: 45%;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 50px;
+}
+
+.scroll{
+    display: flex;
+    top: 32%;
+    left: 50%;
+    position: fixed;
+    transform: translateX(-50%);
+    width: 4%;
+    height: 10%;
+    background-color: #fff;
+    border-radius: 50px;
+    animation: move 1s infinite;
+}
+
+
+@keyframes move{
+    to{
+        top: 35%;
+        opacity: 0;
+    }
+}
 /********************** 사진 *****************/
 #photo {
     height: 100%;
@@ -54,7 +108,7 @@
 
 #photo li:hover {
     transform: scale(1.02);
-    cursor: pointer;
+    
     z-index: 3;
 }
 

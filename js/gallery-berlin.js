@@ -19,7 +19,7 @@ var psts = 0; //(0-허용,1-불허용)
 
 
 $(function () { ////////////////// JQB ////////////
-    $(".fixed_wrap, .circle_wrap").addClass("on");
+    $(".fixed_wrap, .back_wrap").addClass("on");
 
     console.log("로딩완료");
     menuSts = 1; // (0-불허용,1-허용)

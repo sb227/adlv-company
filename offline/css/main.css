@@ -1,0 +1,417 @@
+@charset "UTF-8";
+/* 오프라인 샵 메인 페이지 css */
+
+/* 파일 merging(합치기) */
+
+:root {
+    --swiper-theme-color: #000;
+}
+
+.section {
+    padding-top: 10%;
+}
+
+/* 배너 추가 영역 */
+.banner {
+    width: 100%;
+    box-shadow: 1px 1px 10px #ccc;
+    margin-bottom: 5%;
+}
+
+.banner img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.call_copy {
+    text-align: center;
+}
+
+.call_copy h3 {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.call_list {
+    display: flex;
+    justify-content: center;
+}
+
+.call_list li {
+    margin: 0 20px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: .4s;
+}
+
+.call_list li:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+@media only screen and (max-width:768px) {
+    .call_list {
+        font-size: 12px;
+        flex-wrap: wrap;
+    }
+
+    .call_list li {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .call_copy h3 {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+}
+
+/* 미디어쿼리 768 */
+
+/* 매장 선택 */
+.select_shop_wrap {
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+    text-align: center;
+}
+
+.select_shop_area {
+    cursor: pointer;
+    margin-right: 10%;
+}
+.select_shop {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    padding: 3px;
+    border-radius: 50% 50%;
+    margin: 0 auto;
+}
+
+.select_shop_area:last-child {
+    margin: 0;
+}
+
+.select_shop.active {
+    border: 1px dashed #000;
+}
+
+.select_shop img {
+    width: 100%;
+    border-radius: 50% 50%;
+}
+
+.select_shop_text {
+    margin-top: 3px;
+}
+
+/* 메인타이틀 */
+.text_wrap {
+    position: relative;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.text_wrap::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    bottom: -30px;
+    left: 47%;
+    right: 47%;
+    background-color: #333;
+}
+
+.main_tit {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+
+.sub_tit {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+
+/* 신규매장 */
+
+
+
+.section_tit {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.market_img {
+    position: relative;
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: url('../images/hanam_star1.jpg') no-repeat center/cover; */
+}
+
+.market_img img {
+    width: 100%;
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+.showroom .market_img img{
+    width: auto;
+}
+
+.new_market_txt {
+    display: flex;
+    padding: 3% 0;
+}
+
+.new_market_txt>div {
+    width: 50%;
+    line-height: 1.7;
+}
+
+.market_name {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.new_market_txt_right {
+    word-break: keep-all;
+}
+
+
+/*********************** 25 추가 ************************************/
+/* 매장 리스트 */
+#kor{
+    display: block;
+}
+
+#kor >div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#kor h3{
+    display: block;
+    width: 100%;
+    font-size: 6vmin;
+    font-weight: 600;
+    text-align: center;
+    padding: 10%;
+}
+
+
+.duty_shop .shop_wrap:last-child{
+    margin-right: auto;
+    margin-left: 2%;
+}
+
+.shop_img_box{
+    position: relative;
+    overflow: hidden;
+}
+
+.shop_wrap img{
+    width: 100%;
+    display: block;
+}
+
+.shop_img_box span{
+    position: absolute;
+    left: 1%;
+    bottom: 1%;
+    z-index: 1;
+}
+
+
+@media all and (max-width:768px){
+    .duty_shop .shop_wrap:last-child{
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+
+/*********************** 25 추가 ************************************/
+
+
+
+#overseas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.shop_wrap {
+    width: 32%;
+    margin-bottom: 10%;
+}
+
+@media only screen and (max-width:768px) {
+    .showroom .market_img img{
+        position: relative;
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .select_shop_text {
+        font-size: 10px;
+    }
+
+    .banner {
+        margin-bottom: 10%;
+    }
+
+    .shop_wrap {
+        width: 48%;
+    }
+
+    .shop_wrap:last-child {
+        margin-right: 0;
+    }
+}
+
+
+@media only screen and (max-width:500px) {
+    .shop_wrap {
+        width: 100%;
+        margin-bottom: 15%;
+    }
+
+    .select_shop_area {
+        margin-right: 2%;
+    }
+}
+
+/* 해외매장 이미지 */
+/* .shop_img {
+    overflow: hidden;
+    height: 300px;
+} */
+
+
+/* 지도영역 */
+/* map */
+#map {
+    height: 700px;
+    max-height: 100%;
+    margin-top: 0;
+}
+
+/* 지도 정보 영역 */
+.title {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.call_info {
+    margin-bottom: 3px;
+}
+
+.gm-style .gm-style-iw-c {
+    padding: 12px !important;
+}
+
+@media only screen and (max-width:768px) {
+
+    .select_shop {
+        width: 50px;
+        height: 50px;
+    }
+
+    .market_img,
+    #map {
+        height: 300px;
+    }
+
+    /* 지도 정보 영역 */
+    .title {
+        font-size: 16px;
+    }
+
+    .call_info,
+    .open_close_info {
+        font-size: 13px;
+    }
+
+}
+
+/* 미디어쿼리 768 */
+
+@media only screen and (max-width:640px) {
+    .main_tit {
+        font-size: 25px;
+        margin: 10% 0;
+    }
+
+    .main_tit::after {
+        bottom: -30px;
+    }
+
+
+
+    .new_market_txt {
+        flex-wrap: wrap;
+    }
+
+    .new_market_txt>div {
+        width: 100%;
+    }
+
+    .new_market_txt_right {
+        margin-top: 15px;
+        font-size: 12px;
+    }
+
+    .section_tit {
+        margin-top: 30px;
+        font-size: 18px;
+    }
+}
+
+/* 미디어쿼리 640 */
+
+@media only screen and (max-width:480px) {
+    .main_tit {
+        font-size: 18px;
+    }
+
+    .sub_tit {
+        font-size: 14px;
+    }
+
+    /* 줄바꿈 */
+    .mob_block {
+        display: block;
+    }
+
+    /* 지도 정보 영역 */
+    .title {
+        font-size: 15px;
+    }
+
+    .call_info,
+    .open_close_info {
+        font-size: 12px;
+    }
+
+}

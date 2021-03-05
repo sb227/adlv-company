@@ -76,7 +76,7 @@ $(function () {
     $('.cont_wrap').hide();
     $('.cont_wrap').eq(0).show();
 
-    var clb_tit = ['PINKFONG BABYSHARK', 'KAKAO FRIENDS', 'SESAME STREET', 'DISNEY', 'DISNEY MONSTERS', 'DISNEY TOYSTORY', 'BURIED ALIVE', 'LOG', 'MR.TIME']
+    var clb_tit = ['PINKFONG BABYSHARK', 'KAKAO FRIENDS', 'SESAME STREET', 'DISNEY', 'DISNEY MONSTERS', 'DISNEY TOYSTORY', 'BURIED ALIVE', 'MR.TIME']
 
     $('.cont_title').text('ADLV X ' + clb_tit[0])
     // 타이틀 포문
