@@ -95,5 +95,10 @@ $(function () {
             console.log('제베ㅏㄹ')
             $(this).find('.sub_gnb_wrap').toggleClass('active');
         }); /////// click ////////////
+
+		$('.mob_menu_bg').click(function(){
+			$(".mob_menu_wrap").toggleClass('active');
+			$(".mob_menu_btn").toggleClass('active');
+		  })
 	}
 }); //////////// jqb///////////////////////////

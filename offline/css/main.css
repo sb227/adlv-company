@@ -3,6 +3,12 @@
 
 /* 파일 merging(합치기) */
 
+.offline .lang_btn li {
+    padding-left: 0;
+    padding-right: 15px;
+}
+
+
 :root {
     --swiper-theme-color: #000;
 }
@@ -47,7 +53,7 @@
     transition: .4s;
 }
 
-.call_list li:hover{
+.call_list li:hover {
     background-color: #000;
     color: #fff;
 }
@@ -83,6 +89,7 @@
     cursor: pointer;
     margin-right: 10%;
 }
+
 .select_shop {
     width: 80px;
     height: 80px;
@@ -173,7 +180,7 @@
     height: 500px;
 }
 
-.showroom .market_img img{
+.showroom .market_img img {
     width: auto;
     height: 100%;
 }
@@ -201,18 +208,17 @@
 
 /*********************** 25 추가 ************************************/
 /* 매장 리스트 */
-#kor{
+#kor {
     display: block;
 }
 
-#kor >div{
+#kor>div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-#kor h3{
-    display: block;
+#kor h3 {
     width: 100%;
     font-size: 6vmin;
     font-weight: 600;
@@ -221,22 +227,22 @@
 }
 
 
-.duty_shop .shop_wrap:last-child{
+.duty_shop .shop_wrap:last-child {
     margin-right: auto;
     margin-left: 2%;
 }
 
-.shop_img_box{
+.shop_img_box {
     position: relative;
     overflow: hidden;
 }
 
-.shop_wrap img{
+.shop_wrap img {
     width: 100%;
     display: block;
 }
 
-.shop_img_box span{
+.shop_img_box span {
     position: absolute;
     left: 1%;
     bottom: 1%;
@@ -244,8 +250,8 @@
 }
 
 
-@media all and (max-width:768px){
-    .duty_shop .shop_wrap:last-child{
+@media all and (max-width:768px) {
+    .duty_shop .shop_wrap:last-child {
         margin-right: 0;
         margin-left: 0;
     }
@@ -268,7 +274,7 @@
 }
 
 @media only screen and (max-width:768px) {
-    .showroom .market_img img{
+    .showroom .market_img img {
         position: relative;
         height: auto;
         width: 100%;
@@ -321,7 +327,7 @@
     margin-top: 0;
 }
 
-#map_wrap{
+#map_wrap {
     padding-bottom: 5%;
 }
 
@@ -341,11 +347,30 @@
     padding: 12px !important;
 }
 
+
+@media only screen and (max-width:1024px) {
+    .header_right {
+        display: flex;
+        position: relative;
+    }  
+
+    .lang_btn{
+        position: absolute;
+        top: 100%;
+    }
+
+    .offline .lang_btn li{
+        padding-right: 0;
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+}
+
 @media only screen and (max-width:768px) {
-    .showroom .swiper-container{
+    .showroom .swiper-container {
         height: 200px;
     }
-    
+
     .select_shop {
         width: 50px;
         height: 50px;
@@ -366,7 +391,7 @@
         font-size: 13px;
     }
 
-    .showroom .swiper-wrapper{
+    .showroom .swiper-wrapper {
         align-items: center;
     }
 
@@ -429,4 +454,21 @@
         font-size: 12px;
     }
 
+}
+
+
+.eng {
+    display: none;
+}
+
+.kor {
+    display: block;
+}
+
+.eng.active {
+    display: block;
+}
+
+.kor.active {
+    display: none;
 }

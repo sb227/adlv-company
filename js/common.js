@@ -27,5 +27,11 @@ $(document).ready(function (e) {
         $('.mob_menu_area li').click(function(){
             $(this).find('.sub_gnb_wrap').toggleClass('active');
         }); /////// click ////////////
+
+        $('.mob_menu_bg').click(function(){
+            $(".fixed_wrap, .circle_wrap, .indicator_wrap").toggleClass("on");
+            $(".mob_menu_wrap").toggleClass('active');
+            $(".mob_menu_btn").toggleClass('active');
+          })
     }
 }); ///////////////////////////// JQB /////////////////////////////

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>아크메드라비</title>
-	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/reset.css">
@@ -23,7 +23,7 @@
 </head>
 
 <body>
-  <div class="wrap" id="wrap">
+  <div class="wrap offline" id="wrap">
 
     <div class="fixed_wrap">
       <header class="header_wrap">
@@ -76,11 +76,12 @@
           </ul>
         </div>
         <div class="header_right">
-          <ul class="lang_btn">
+
+          <ul class="lang_btn mob_dn">
             <li class="active">한국어</li>
             <li>English</li>
           </ul>
-          <a href="https://acmedelavie.com/" target="_blank">GO TO STORE</a>
+          <a href="https://acmedelavie.com/" target="_blank" class="store_mob">GO TO STORE</a>
           <div class="mob_menu_btn">
             <img src="../images/icon_bar_white.png" alt="menu" class="white">
             <img src="../images/icon_bar_black.png" alt="menu" class="black">
@@ -132,18 +133,30 @@
             <li>
               <a href="../global.html">GLOBAL</a>
             </li>
+            <li><a href="https://acmedelavie.com/" target="_blank">GO TO STORE</a></li>
+            <li>
+              <ul class="lang_btn mob_db">
+                <li class="active">한국어</li>
+                <li>English</li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
     </div>
 
     <section class="call_copy">
-      <h3>클릭 시 각 매장 전화번호가 복사됩니다!</h3>
+      <h3 class="kor">클릭 시 각 매장 전화번호가 복사됩니다!</h3>
+      <h3 class="eng">Please click. The store's phone number will be copied.</h3>
       <ul class="call_list">
-        <li class="call_1">청담 SHOWROOM</li>
-        <li class="call_2">롯데백화점 본점</li>
-        <li class="call_3">신세계백화점 하남 스타필드점</li>
-        <li class="call_4">신세계백화점 대구점</li>
+        <li class="call_1 kor">청담 SHOWROOM</li>
+        <li class="call_2 kor">롯데백화점 본점</li>
+        <li class="call_3 kor">신세계백화점 하남 스타필드점</li>
+        <li class="call_4 kor">신세계백화점 대구점</li>
+        <li class="call_1 eng">Cheongdam SHOWROOM</li>
+        <li class="call_2 eng">Lotte Department Store - Myeongsong</li>
+        <li class="call_3 eng">Shinsegae Department Store - Hanam</li>
+        <li class="call_4 eng">Shinsegae Department Store - Daegu</li>
       </ul>
     </section>
     <!-- 배너 끝 -->
@@ -160,32 +173,37 @@
         <div class="select_shop">
           <img src="images/circle_shop1.png" alt="신규매장">
         </div>
-        <p class="select_shop_text">신규 매장</p>
+        <p class="select_shop_text kor">신규 매장</p>
+        <p class="select_shop_text eng">New Store</p>
       </div>
       <div class="select_shop_area">
         <div class="select_shop ">
           <img src="images/circle_shop2.png" alt="국내매장">
         </div>
-        <p class="select_shop_text">국내/면세 매장</p>
+        <p class="select_shop_text kor">국내/면세 매장</p>
+        <p class="select_shop_text eng">Domestic / Duty Free</p>
       </div>
       <div class="select_shop_area">
         <div class="select_shop">
           <img src="images/circle_shop3.png" alt="해외매장">
         </div>
-        <p class="select_shop_text">해외 매장</p>
+        <p class="select_shop_text kor">해외 매장</p>
+        <p class="select_shop_text eng">Overseas</p>
       </div>
       <div class="select_shop_area">
         <div class="select_shop">
           <img src="images/circle_shop4.png" alt="지도보기">
         </div>
-        <p class="select_shop_text">지도 보기<p>
+        <p class="select_shop_text kor">지도 보기<p>
+            <p class="select_shop_text eng">Google Map<p>
       </div>
     </section>
     <!-- 셀렉 영역 끝 -->
 
     <!-- 청담 쇼룸 -->
     <section class="section active">
-      <h3 class="section_tit">아크메드라비 청담 SHOWROOM</h3>
+      <h3 class="section_tit kor">아크메드라비 청담 SHOWROOM</h3>
+      <h3 class="section_tit eng">ADLV Cheongdam SHOWROOM</h3>
       <div class="new_shop showroom">
         <div class="swiper-container">
           <div class="swiper-wrapper">
@@ -218,8 +236,10 @@
 
         <div class="new_market_txt">
           <div class="new_market_txt_left">
-            <p class="market_name">아크메드라비 오프라인 스토어 청담 SHOWROOM</p>
-            <p class="market_address">서울특별시 강남구 선릉로 152길 34</p>
+            <p class="market_name kor">아크메드라비 오프라인 스토어 청담 SHOWROOM</p>
+            <p class="market_name eng">ADLV Cheongdam SHOWROOM</p>
+            <p class="market_address">Cheongdam showroom<br>
+              34, Seolleung-ro 152-gil, Gangnam-gu, Seoul, Republic of Korea</p>
             <p class="market_call">+82(0)2-512-7894</p>
             <p class="market_open">MON - SUN 11:00 - 20:00</p>
           </div>
@@ -234,13 +254,16 @@
     <!-- 새로운 매장 -->
     <section class="section">
       <div class="text_wrap">
-        <h2 class="main_tit">아크메드라비 신세계 백화점 신규 입점! </h2>
-        <span class="sub_tit">신세계백화점 스타필드 하남점 2021.02.01 오픈</span>
-        <span class="sub_tit">신세계백화점 대구점 2021.02.05 오픈</span>
+        <h2 class="main_tit kor">아크메드라비 신세계 백화점 신규 입점! </h2>
+        <span class="sub_tit kor">신세계백화점 스타필드 하남점 2021.02.01 오픈</span>
+        <span class="sub_tit kor">신세계백화점 대구점 2021.02.05 오픈</span>
+        <span class="sub_tit eng">2021.02.01 ADLV Shinsegae Department Store hanam Starfield OPEN !</span>
+        <span class="sub_tit eng">2021.02.05 ADLV Shinsegae Department Store Daegu OPEN !</span>
       </div>
 
 
-      <h3 class="section_tit">신규매장</h3>
+      <h3 class="section_tit kor">신규매장</h3>
+      <h3 class="section_tit eng">New Store</h3>
 
       <div class="new_shop hanam">
         <div class="swiper-container">
@@ -297,8 +320,10 @@
 
         <div class="new_market_txt">
           <div class="new_market_txt_left">
-            <p class="market_name">아크메드라비 신세계백화점 스타필드 하남점</p>
-            <p class="market_address">경기도 하남시 미사대로 750 스타필드 3F</p>
+            <p class="market_name kor">아크메드라비 신세계백화점 스타필드 하남점</p>
+            <p class="market_name eng">ADLV Shinsegae Department Store hanam Starfield</p>
+            <p class="market_address">Shinsegae department store hanam starfield<br>
+              750, Misa-daero, Hanam-si, Gyeonggi-do, Republic of Korea</p>
             <p class="market_call">031-8072-1665</p>
             <p class="market_open">MON - THU 11:00 - 20:00</p>
             <p class="market_open">FRI - SUN 11:00 - 21:00</p>
@@ -355,8 +380,11 @@
 
         <div class="new_market_txt">
           <div class="new_market_txt_left">
-            <p class="market_name">아크메드라비 신세계백화점 대구점</p>
-            <p class="market_address">대구 동구 동부로 149 신세계백화점 6F</p>
+            <p class="market_name kor">아크메드라비 신세계백화점 대구점</p>
+            <p class="market_name eng">ADLV Shinsegae Department Store Daegu</p>
+            <p class="market_address">
+              Shinsegae department store daegu<br>
+              149, Dongbu-ro, Dong-gu, Daegu, Republic of Korea</p>
             <p class="market_call">053-661-6670</p>
             <p class="market_open">MON - THU 11:00 - 20:00</p>
             <p class="market_open">FRI - SUN 11:00 - 20:30</p>
@@ -372,10 +400,12 @@
     <!-- 국내 매장 시작-->
     <section class="section" id="kor">
       <div class="kor_shop">
-        <h3>국내 매장</h3>
+        <h3 class="kor">국내 매장</h3>
+        <h3 class="eng">Domestic</h3>
       </div>
       <div class="duty_shop">
-        <h3>면세 매장</h3>
+        <h3 class="kor">면세 매장</h3>
+        <h3 class="eng">Duty Free</h3>
       </div>
     </section>
     <!-- 국내 매장 끝 -->
@@ -388,9 +418,10 @@
     <!-- 지도 시작 -->
     <section class="section" id="map_wrap">
       <div class="text_wrap">
-        <h2 class="main_tit">아크메드라비의 전 매장을 한 눈에 확인해보세요!</h2>
+        <h2 class="main_tit kor">아크메드라비의 전 매장을 한 눈에 확인해보세요!</h2>
       </div>
-      <h3 class="section_tit">전체보기</h3>
+      <h3 class="section_tit kor">전체보기</h3>
+      <h3 class="section_tit eng">Google Map</h3>
       <div id="map"></div>
     </section>
     <!-- 지도 끝 -->

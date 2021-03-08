@@ -9,6 +9,7 @@ body {
 }
 
 /*****************************************************************/
+
 /* 픽스영역 on 글씨 */
 .fixed_wrap.on .black {
     display: none;
@@ -460,6 +461,24 @@ body {
 }
 
 @media only screen and (max-width:800px) {
+    .store_mob{
+        display: none;
+    }
+
+    .lang_btn.mob_dn{
+        display: none;
+    }
+
+    .lang_btn.mob_db{
+        display: flex;
+        width: 100%;
+    }
+
+    .lang_btn.mob_db li{
+        width: 30%;
+        text-align: left;
+    }
+
     .indicator_area a {
         font-size: 10px;
     }
