@@ -85,3 +85,32 @@
 }
 
 
+@media only screen and (max-width:800px){
+    #wrap.artwork{
+        padding-top: 0;
+    }
+
+    .artwork .page{
+        height: 100%;
+    }
+
+    iframe{
+        display: none;
+    }
+
+    .artwork #page1{
+        background: url(../images/bf_bg.jpg) no-repeat 50% bottom/300%;
+    }
+
+    .artwork #page2{
+        background: url(../images/artwork_bg.jpg) no-repeat 82% 50%/400%;
+    }
+
+    .artwork #page3{
+        background: url(../images/logoplay_bg.jpg) no-repeat 50% 20%/cover;
+    }
+
+    .bf_cont_wrap{
+        width: 80%;
+    }
+}

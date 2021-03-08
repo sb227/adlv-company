@@ -22,7 +22,6 @@ var winH = $(window).height();
 //////////// 전역변수 ////////////////
 
 $(document).ready(function (e) {
-	$(".fixed_wrap, .circle_wrap, .indicator_wrap").addClass("on");
 	$(".indicator_area a").click(function (e) {
 		e.preventDefault();
 		var idx = $(this).parent().index();
@@ -83,14 +82,18 @@ $(document).ready(function (e) {
 			$(".indicator_area a").eq(pno).parent().addClass("on").siblings().removeClass("on");
 		}); ////////////////// mousewheel //////////////////////////
 
-	$('.lang_btn li').click(function(){
+	$('.lang_btn li').click(function () {
 		var idx = $(this).index();
-		$('.lang_btn li').removeClass('active');
-		$(this).addClass('active');
+		var btn_num = $('.lang_btn').index();
+		for (var i = 0; i < btn_num; i++) {
+			console.log('gldd')
+			$('.lang_btn').eq(i).find('li').removeClass('active');
+			$('.lang_btn').eq(i).find('li').eq(idx).addClass('active');
+		}
 
-		if(idx){
+		if (idx) {
 			$('.eng, .kor').addClass('active')
-		} else{
+		} else {
 			$('.eng, .kor').removeClass('active')
 		}
 	}); /////////////////// 언어 /////////////
@@ -107,9 +110,9 @@ function pageAction() {
 	if (mob) return true;
 
 	if (pno === 3) {
-		$(".fixed_wrap, .circle_wrap, .indicator_wrap").removeClass("on");
-	} else {
 		$(".fixed_wrap, .circle_wrap, .indicator_wrap").addClass("on");
+	} else {
+		$(".fixed_wrap, .circle_wrap, .indicator_wrap").removeClass("on");
 	}
 
 } ////// pageAction 함수 //////////////////////////////////

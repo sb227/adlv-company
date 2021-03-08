@@ -15,7 +15,7 @@ var psts = 0; //( 0은 허용 1은 불허용 )
 var winH = $(window).height();
 
 $(function () {
-	// $(".fixed_wrap, .circle_wrap").addClass("on");
+	$(".fixed_wrap, .circle_wrap, .indicator_wrap").addClass("on");
 	$(".indicator_area a").click(function (e) {
         e.preventDefault();
         var idx = $(this).parent().index();
@@ -39,7 +39,7 @@ $(function () {
 	$(document).on("mousewheel DOMMouseScroll",
 		function (e) {
 			// 모바일일때 작동막기
-			if (mob) return true;
+			// if (mob) return true;
 
 			//광스크롤막기 //
 			if (psts === 1) return true;
@@ -90,5 +90,10 @@ $(function () {
 			$(".mob_menu_wrap").toggleClass('active');
 			$(".mob_menu_btn").toggleClass('active');
 		}); /////////// click ///////////
+
+		$('.mob_menu_area li').click(function(){
+            console.log('제베ㅏㄹ')
+            $(this).find('.sub_gnb_wrap').toggleClass('active');
+        }); /////// click ////////////
 	}
 }); //////////// jqb///////////////////////////

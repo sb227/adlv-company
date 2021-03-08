@@ -52,19 +52,4 @@ $(function () {
 
 		}); ////////////////// mousewheel //////////////////////////
 
-	$(".circle_wrap").click(function () {
-		$("#wrap").animate({
-			scrollTop: 0
-		}, 800, "easeOutSine");
-		pno = 0;
-
-		$(".indicator_area li").removeClass("on").first().addClass("on");
-	}); //////// top 버튼 클릭 ///////
-
-	if (mob) {
-		$(".mob_menu_btn").click(function () {
-			$(".mob_menu_wrap").toggleClass('active');
-			$(".mob_menu_btn").toggleClass('active');
-		}); /////////// click ///////////
-	}
 }); //////////// jqb///////////////////////////

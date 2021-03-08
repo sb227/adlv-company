@@ -18,12 +18,11 @@ var winH = $(window).height();
 
 
 $(function () {
-    $(".fixed_wrap, .circle_wrap").addClass("on");
 
     $(document).on("mousewheel DOMMouseScroll",
         function (e) {
             // 모바일일때 작동막기
-            if (mob) return true;
+            if ($(window).width() <= 800) return true;
 
             //광스크롤막기 //
             if (psts === 1) return true;
@@ -56,8 +55,6 @@ $(function () {
             }, 800, "easeOutSine"); //// animate /////////////////
 
         }); ////////////////// mousewheel //////////////////////////
-
-
 
 
     // 하단 클릭시 컨텐츠 변경
@@ -109,13 +106,19 @@ $(function () {
 
 
         var swiper = new Swiper('.mob_swiper', {
-            slidesPerView: 5,
+            slidesPerView: 5.5,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             }
         });
 
+    } /////////////////////// 1024 if //////////////////////
+
+    if ($(window).width() <= 800) {
+        var swiper = new Swiper('.mob_swiper', {
+            slidesPerView: 3.5
+        });
     } /////////////////////// 1024 if //////////////////////
 
 }); //////////// jqb///////////////////////////

@@ -10,19 +10,23 @@ if ($(window).width() <= 800) {
 
 
 $(function () { ////////////////// JQB ////////////
-    $(".fixed_wrap, .circle_wrap").addClass("on");
-     
-    $('.gallery_list_info_wrap li').hide();
-    var gallery_num = $('.gallery_list_wrap li').length
-
-    $('.gallery_list_wrap li').mouseleave(function(){
+    if (mob) {
+        $('.gallery_list_info_wrap li').show();
+    } else {
         $('.gallery_list_info_wrap li').hide();
-    }); //////////// mouseover /////////////////
-    $('.gallery_list_wrap li').mouseover(function(){
-        var gallery_num = $(this).index()
-        $('.gallery_list_info_wrap li').eq(gallery_num).show();
-    }); //////////// mouseover /////////////////
-    
+        var gallery_num = $('.gallery_list_wrap li').length
+
+        $('.gallery_list_wrap li').mouseleave(function () {
+            $('.gallery_list_info_wrap li').hide();
+        }); //////////// mouseover /////////////////
+        $('.gallery_list_wrap li').mouseover(function () {
+            var gallery_num = $(this).index()
+            $('.gallery_list_info_wrap li').eq(gallery_num).show();
+        }); //////////// mouseover /////////////////
+    }
+
+
+
 
 }); ////////////////// JQB //////////////////////
 /////////////////////////////////////////////////

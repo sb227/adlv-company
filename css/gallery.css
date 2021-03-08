@@ -177,6 +177,10 @@
         width: 80vmin;
         box-shadow: none;
     }
+
+    .move_wheel{
+        display: none;
+    }
 }
 
 /* 미디어쿼리 500 */
@@ -221,6 +225,29 @@
     width: 100%;
 }
 
+@media only screen and (max-width:800px) {
+    #wrap.gallery{
+        height:auto;
+    }
 
+    .gallery_area{
+        width: 70%;
+    }
 
+    .gallery_wrap ul{
+        width: 100%;
+        padding-bottom: 10%;
+    }
 
+    .gallery_list_wrap{
+        display: none;
+    }
+
+    .gallery_list_info_wrap li{
+        margin-bottom: 20%;
+    }
+
+    .gallery_info_tit{
+        font-size: 16px;
+    }
+}

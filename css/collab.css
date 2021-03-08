@@ -27,6 +27,10 @@
     width: 60%;
 }
 
+.cont_wrap_wrap{
+    height: 100%;
+}
+
 /* 콜라보 영역 왼쪽 */
 
 .collab_img_wrap{
@@ -118,30 +122,98 @@
 
 
 @media only screen and (max-width:1280px) {
-    .cont_wrap{
-        height: 50%;
+    .mob_swiper{
+        padding: 0 5%;
     }
+
 }
 
 @media only screen and (max-width:1024px) {
-    .cont_wrap{
-        height: 50%;
+    .mob_swiper{
+        margin-top: 15%;
     }
 
-    .mob_swiper{
-        padding: 0 5%;
-        margin-top: 10%;
+    .cont_wrap_wrap{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+
+    .swiper-button-next, .swiper-container-rtl .swiper-button-prev, .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+        width: auto !important;
+    }
+
+    .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+        right: 0;
+        transform: scale(.5);
+    }
+
+    .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+        left: 0;
+        transform: scale(.5);
+    }
+
+    .cont_wrap{
+        height: 50%;
     }
 }
 
 @media only screen and (max-width:800px) {
+    .mob_swiper{
+        margin-top: 10%;
+    }
 
-}
+    .collab .inbox{
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-@media only screen and (max-width:768px) {
-    
-}
+    .select_collab{
+        width: 35px;
+        height: 35px;
+    }
 
-@media only screen and (max-width:500px) {
-    
+    .select_collab_text{
+        font-size: 9px;
+        line-height: 1;
+    }
+    .cont_wrap{
+        width: 100%;
+    }
+
+    .cont_title{
+        line-height: 1.2;
+    }
+
+    .cont_wrap .left, .cont_wrap .right{
+        width: 100%;
+    }
+
+    .cont_wrap .right{
+        margin: 10% 0;
+    }
+
+    .collab_img_wrap, .collab_txt_wrap{
+        height: auto;
+    }
+
+    .collab_img_wrap{
+        margin-top: 10%;
+    }
+
+    .collab_txt_wrap{
+        font-size: 12px;
+    }
+
+    .collab_link{
+        width: 100%;
+        color:#fff;
+        background-color: #000;
+        margin: 10% 0;
+    }
+
+    .product_swiper{
+        width: 100%;
+    }
 }

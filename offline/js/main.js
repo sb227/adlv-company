@@ -1,7 +1,22 @@
 /// 메인 페이지 JS - main.js ////
-
+/// 0. 모바일용 코드 
+var mob = 0; //0-모바일 아님, 1-모바일
+if ($(window).width() <= 800) {
+  mob = 1;
+}
 $(function (e) { ///////////////// JQB //////////////////////
-  $(".fixed_wrap, .circle_wrap, .indicator_wrap").addClass("on");
+
+  if (mob) {
+    $(".mob_menu_btn").click(function () {
+      $(".fixed_wrap, .circle_wrap, .indicator_wrap").toggleClass("on");
+      $(".mob_menu_wrap").toggleClass('active');
+      $(".mob_menu_btn").toggleClass('active');
+    }); /////////// click ///////////
+
+    $('.mob_menu_area li').click(function () {
+      $(this).find('.sub_gnb_wrap').toggleClass('active');
+    }); /////// click ////////////
+  }
 
   $(".circle_wrap").click(function () {
     $("#wrap").animate({
@@ -9,7 +24,6 @@ $(function (e) { ///////////////// JQB //////////////////////
     }, 800, "easeOutSine");
     pno = 0;
 
-    $(".fixed_wrap, .circle_wrap, .indicator_wrap").addClass("on");
     $(".indicator_area li").removeClass("on").first().addClass("on");
 
   }); //////// top 버튼 클릭 ///////
@@ -110,7 +124,7 @@ $(function (e) { ///////////////// JQB //////////////////////
     ['沈阳大悦城 (심양 조이시티)', '辽宁省沈阳市大东区小东路5号大悦城B馆一层B124A<br>B124A, 1st Floor, Building B, Joy City, No.5 Xiaodong Road, Dadong District, Shenyang City, Liaoning Province <br>요녕성 심양시 대동구', 'MON - SUN 10:00 - 21:30'],
     ['哈尔滨红博中央公园 (하얼빈 홍보중앙공원)', '黑龙江省哈尔滨市南岗区红旗大街339号红博中央公园大道上区35号<br>No.35, Upper District, Hongbo Central Park Avenue, No.339, Hongqi Street, Nangang District, Harbin, Heilongjiang Province <br>흑룡강성 하얼빈시 남강구', 'MON - SUN 09:30 - 21:00'],
     // ['大连东港威尼斯水城', 38.92659932612846, 121.6854046537263], 폐업중
-    ['盘锦双兴南路万达广场店（반금 완자플라자)', '辽宁省盘锦市兴隆台区双兴南路71号万达广场2层-2020号<br>No.2020, 2nd Floor, Wanda Plaza, No.71 Shuangxing South Road, Xinglongtai District, Panjin City, Liaoning Province <br>요녕시 반금시 융대구', 'MON - SUN 09:30 - 21:30'],
+    ['盘锦双兴南路万达广场店（반금 완다플라자)', '辽宁省盘锦市兴隆台区双兴南路71号万达广场2层-2020号<br>No.2020, 2nd Floor, Wanda Plaza, No.71 Shuangxing South Road, Xinglongtai District, Panjin City, Liaoning Province <br>요녕시 반금시 융대구', 'MON - SUN 09:30 - 21:30'],
     ['哈尔滨金安国际购物广场 (하얼빈 찐안국제쇼핑몰)', '黑龙江省哈尔滨道里区中央大街73号金安国际购物广场二层B区201A<br>201A, Area B, Second Floor, Jin an International Shopping Plaza, No.73, Zhongyang Street, Daoli District, Harbin, Heilongjiang Province <br>흑룡강성 하얼빈시 도리구', 'MON - SUN 09:30 - 21:00'],
     ['杭州湖滨银泰in77 (항저우 호빈인타이 in77)', '浙江省杭州市上城区延安路245号湖滨银泰in77 B馆B1-183号<br>B1-183, Building B, Hubin Yintai in77, No.245, Yan an Road, Shangcheng District, Hangzhou City, Zhejiang Province <br>절강성 항주시 상성구', 'MON - SUN 10:00 - 22:00'],
 
@@ -139,13 +153,7 @@ $(function (e) { ///////////////// JQB //////////////////////
       "</li><li class='market_address'>" + overseas_locations[i][1] +
       "</li><li class='market_call'>" + overseas_locations[i][2] + "</li></ul>");
 
-
   } /////////// for i /////////////
-
-
-
-
-
 
 }); ///////////////// JQB //////////////////////
 

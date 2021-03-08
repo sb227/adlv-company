@@ -10,6 +10,7 @@ console.log("모바일코드:" + mob);
 //////////// 전역변수 ////////////////
 
 $(document).ready(function (e) {
+	$(".fixed_wrap, .circle_wrap, .indicator_wrap").addClass("on");
 	console.log("main js");
 
 	var snum = 1;
@@ -37,5 +38,9 @@ $(document).ready(function (e) {
             $(".mob_menu_wrap").toggleClass('active');
             $(".mob_menu_btn").toggleClass('active');
         }); /////////// click ///////////
+
+		$('.mob_menu_area li').click(function(){
+            $(this).find('.sub_gnb_wrap').toggleClass('active');
+        }); /////// click ////////////
     }
 }); ///////////제이쿼리 구역///////////
