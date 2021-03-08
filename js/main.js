@@ -83,17 +83,17 @@ $(document).ready(function (e) {
 			$(".indicator_area a").eq(pno).parent().addClass("on").siblings().removeClass("on");
 		}); ////////////////// mousewheel //////////////////////////
 
-	// $('.lang_btn li').click(function(){
-	// 	var idx = $(this).index();
-	// 	$('.lang_btn li').removeClass('active');
-	// 	$(this).addClass('active');
+	$('.lang_btn li').click(function(){
+		var idx = $(this).index();
+		$('.lang_btn li').removeClass('active');
+		$(this).addClass('active');
 
-	// 	if(idx){
-	// 		$('.eng, .kor').addClass('active')
-	// 	} else{
-	// 		$('.eng, .kor').removeClass('active')
-	// 	}
-	// }); /////////////////// 언어 /////////////
+		if(idx){
+			$('.eng, .kor').addClass('active')
+		} else{
+			$('.eng, .kor').removeClass('active')
+		}
+	}); /////////////////// 언어 /////////////
 
 }); ///////////제이쿼리 구역///////////
 

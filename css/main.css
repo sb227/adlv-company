@@ -96,6 +96,11 @@
     padding-right: 2%;
 }
 
+.main_content_text_wrap.eng span{
+    font-weight: 800;
+    color: #333;
+}
+
 /* 제목 */
 .main_content_title {
     font-size: 4vmin;
@@ -116,6 +121,15 @@
 .main_content_text {
     color: #999;
     font-size: 1em;
+}
+
+.slogan .main_content_text{
+    padding-top: 3%;
+    line-height: 1.8;
+}
+
+.slogan .main_content_sub{
+    line-height: 1.8;
 }
 
 .second .main_content_text_wrap{
@@ -183,10 +197,11 @@
     padding-right: 2%;
 }
 
-.fourth .main_content_text{
+.fourth.main_content_text{
     color: #000;
     line-height: 1.8;
     font-weight: 500;
+    margin-top: 3%;
 }
 
 .hidden_txt_img_wrap{
