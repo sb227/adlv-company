@@ -953,6 +953,7 @@ body {
     }
     
     .index_temp .temp_tw_wrap{
+        display: block;
         background: url(../images/bg1.jpg) no-repeat center bottom/160%;
         height: 50%;
         position: relative;
