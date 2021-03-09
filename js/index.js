@@ -33,19 +33,59 @@ $(document).ready(function (e) {
 		}, 1000);
 	}, 3000); ////////// 슬라이드 돌아 ////////////
 
-	if(mob){
-        $(".mob_menu_btn").click(function(){
-            $(".mob_menu_wrap").toggleClass('active');
-            $(".mob_menu_btn").toggleClass('active');
-        }); /////////// click ///////////
+	// if(mob){
+	//     $(".mob_menu_btn").click(function(){
+	//         $(".mob_menu_wrap").toggleClass('active');
+	//         $(".mob_menu_btn").toggleClass('active');
+	//     }); /////////// click ///////////
 
-		$('.mob_menu_area li').click(function(){
-            $(this).find('.sub_gnb_wrap').toggleClass('active');
-        }); /////// click ////////////
+	// 	$('.mob_menu_area li').click(function(){
+	//         $(this).find('.sub_gnb_wrap').toggleClass('active');
+	//     }); /////// click ////////////
 
-		$('.mob_menu_bg').click(function(){
+	// 	$('.mob_menu_bg').click(function(){
+	// 		$(".mob_menu_wrap").toggleClass('active');
+	// 		$(".mob_menu_btn").toggleClass('active');
+	// 	  })
+	// }
+
+	if (mob) {
+		$(".mob_menu_btn").click(function () {
 			$(".mob_menu_wrap").toggleClass('active');
 			$(".mob_menu_btn").toggleClass('active');
-		  })
-    }
+			$(".header_wrap").toggleClass('active');
+			$(".fixed_wrap").toggleClass('on');
+
+		}); /////////// click ///////////
+
+		$('.mob_menu_area li').click(function () {
+			$(this).find('.sub_gnb_wrap').toggleClass('active');
+		}); /////// click ////////////
+
+		$('.mob_menu_bg').click(function () {
+			$(".mob_menu_wrap").toggleClass('active');
+			$(".mob_menu_btn").toggleClass('active');
+		})
+
+
+		$('#wrap').scroll(function () {
+            var scTop = $(this).scrollTop();
+
+            // 왼쪽 높이 구하기
+            var lpos = $(".temp_sns_wrap").height();
+            console.log(lpos);
+
+            // 로고 기준선 액션 ///
+            if (scTop > lpos + 100) {
+                //console.log("하이하이" + $("#show_right").offset().top);
+                $(".circle_wrap").css({
+                    position: "fixed",
+                    bottom: "20%"
+                }); //////// css ////////////
+            } /////// if ///////////
+            else {
+                $(".circle_wrap").attr("style", ""); //////// css ////////////
+            }
+        }); /////////// 스크롤 ////////////
+	}
 }); ///////////제이쿼리 구역///////////

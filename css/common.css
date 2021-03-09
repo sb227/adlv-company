@@ -462,28 +462,28 @@ body {
 }
 
 @media only screen and (max-width:800px) {
-    .mob_block{
+    .mob_block {
         display: block;
     }
 
-    .mob_none{
-        display: none;
-    }
-    
-    .store_mob{
+    .mob_none {
         display: none;
     }
 
-    .lang_btn.mob_dn{
+    .store_mob {
         display: none;
     }
 
-    .lang_btn.mob_db{
+    .lang_btn.mob_dn {
+        display: none;
+    }
+
+    .lang_btn.mob_db {
         display: flex;
         width: 100%;
     }
 
-    .lang_btn.mob_db li{
+    .lang_btn.mob_db li {
         width: 30%;
         text-align: left;
     }
@@ -720,15 +720,195 @@ body {
 }
 
 
-@media (hover: hover)  {
-    
-.gnb_wrap li:hover .sub_gnb_wrap {
-    display: flex;
-}
+@media (hover: hover) {
+
+    .gnb_wrap li:hover .sub_gnb_wrap {
+        display: flex;
+    }
 
 
     .footer_sns li:hover span {
         transform: translateX(-50%) scale(1.2);
         border: 1px solid #000;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 임시 인덱스 *******************************************/
+@media only screen and (max-width: 800px) {
+    .index_temp#wrap {
+        padding-top: 50px;
+    }
+
+    .index_temp #index_slide {
+        display: none;
+    }
+
+    .index_temp .header_wrap {
+        background-color: #fff;
+    }
+
+    .index_temp .header_wrap.active{
+        background: transparent;
+    }
+    
+    .index_temp .mob_menu_area .sub_gnb_wrap a{
+        color: #fff;
+    }
+
+    .index_temp .header_wrap {
+        justify-content: flex-end;
+    }
+
+    .index_temp .fixed_wrap.on .black {
+        display: block;
+    }
+
+    .index_temp .fixed_wrap.on .white {
+        display: none;
+    }
+    
+    .index_temp .mob_menu_btn.active .black{
+        display: none;
+    }
+
+    .index_temp .mob_menu_btn.active .white{
+        display: block;
+    }
+
+    .index_temp .header_left {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .index_temp .temp_cont_wrap {
+        height: 100%;
+    }
+
+    .index_temp .temp_black_wrap {
+        background: #000;
+        height: 20%;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3%;
+    }
+
+    .index_temp .temp_black_wrap p {
+        color: #fff;
+        font-size: 10px;
+    }
+
+    /* 베페 */
+    .index_temp .temp_bf_wrap_wrap {
+        background: url(../images/artwork-bf/bf_bg.jpg) no-repeat bottom/350%;
+        position: relative;
+        color: #fff;
+        height: 50%;
+    }
+
+    .index_temp .temp_bf_wrap_wrap>span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .index_temp .temp_bf_area {
+        position: absolute;
+        left: 10%;
+        bottom: 10%;
+        z-index: 1;
+    }
+
+    .index_temp .temp_bf_tit {
+        font-size: 18px;
+        margin-bottom: 5%;
+    }
+
+    .index_temp .temp_bf_sub_tit {
+        font-size: 15px;
+        line-height: 1.4;
+        margin-bottom: 2%;
+    }
+
+    .index_temp .temp_bf_sub_tit {
+        font-size: 17px;
+    }
+
+    .index_temp .temp_bf_txt{
+        font-size: 9px;
+        line-height: 1.2;
+        font-weight: 100;
+    }
+
+
+    .index_temp .temp_welcome_wrap{
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+    }
+
+    .index_temp .temp_tw_wrap{
+        background: url(../images/bg1.jpg) no-repeat center/cover;
+        height: 60%;
+        position: relative;
+    }
+
+    .index_temp .temp_tw_wrap>span{
+        background-color: rgba(0,0,0,0.4);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0
+    }
+
+    .index_temp .temp_tw_tit{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        text-align: center;
+        font-size: 38px;
+        line-height: 1.4;
+        font-weight: bold;
+        text-shadow: 0px 0px 5px #fff;
+    }
+
+    .index_temp .temp_right_tit{
+        width: 100%;
+        text-align: center;
+        font-size: 10px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .index_temp .temp_sns_wrap{
+        padding: 5%;
     }
 }
