@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
 /* common.css - 공통레이아웃 디자인 */
 html,
 body {
@@ -8,6 +10,7 @@ body {
     /*    overflow: hidden;*/
 }
 
+/* font-family: 'Open Sans', sans-serif; */
 /*****************************************************************/
 
 
@@ -766,6 +769,10 @@ body {
         background: transparent;
     }
     
+    .index_temp .header_logo img{
+        width: 100%;
+    }
+
     .index_temp .mob_menu_area .sub_gnb_wrap a{
         color: #fff;
     }
@@ -811,17 +818,82 @@ body {
         margin-bottom: 3%;
     }
 
+    .index_temp .cursor_ani{
+        height: 100%;
+        animation: cursor 1s infinite ;
+        margin-left: 10px;
+    }
+
+    @keyframes cursor{ 
+        0%{border-right: 1px solid #fff} 
+        50%{border-right: 1px solid #000} 
+        100%{border-right: 1px solid #fff} 
+    }
+
+
     .index_temp .temp_black_wrap p {
         color: #fff;
-        font-size: 10px;
+        font-size: 13px;
+        font-weight: 800;
     }
 
     /* 베페 */
+
+    .index_temp .swiper-container{
+        width: 100%;
+        height: 60%;
+    }
+
     .index_temp .temp_bf_wrap_wrap {
-        background: url(../images/artwork-bf/bf_bg.jpg) no-repeat bottom/350%;
+        background: url(../images/artwork-bf/bf_bg.jpg) no-repeat 40% 100%/360%;
         position: relative;
         color: #fff;
-        height: 50%;
+        height: 100%;
+    }
+
+    .index_temp #slide1{
+        animation: bg1 7s infinite alternate ease-in-out;
+    }
+
+    .index_temp #slide2{
+        animation: bg2 3s infinite alternate ease-in-out;
+    }
+
+    .index_temp #slide3{
+        animation: bg3 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes bg1{
+        0%{
+            background: url(../images/artwork-bf/bf_bg.jpg) no-repeat 44% 65%/500%;
+        }
+        35%{
+            background: url(../images/artwork-bf/bf_bg.jpg) no-repeat 64% 90%/500%;
+        }
+        65%{
+            background: url(../images/artwork-bf/bf_bg.jpg) no-repeat 50% 90%/500%;
+        }
+        100%{
+            background: url(../images/artwork-bf/bf_bg.jpg) no-repeat 64% 70%/500%;
+        }
+    }
+
+    @keyframes bg2{
+        0%{
+            background: url(../images/artwork-bf/artwork_bg.jpg) no-repeat top/cover;
+        }
+        100%{
+            background: url(../images/artwork-bf/artwork_bg.jpg) no-repeat bottom/cover;
+        }
+    }
+
+    @keyframes bg3{
+        0%{
+            background: url(../images/artwork-bf/logoplay_bg.jpg) no-repeat center/200%;
+        }
+        100%{
+            background: url(../images/artwork-bf/logoplay_bg.jpg) no-repeat center/250%;
+        }
     }
 
     .index_temp .temp_bf_wrap_wrap>span {
@@ -835,44 +907,54 @@ body {
 
     .index_temp .temp_bf_area {
         position: absolute;
-        left: 10%;
-        bottom: 10%;
+        left: 5%;
+        bottom: 5%;
         z-index: 1;
     }
 
     .index_temp .temp_bf_tit {
-        font-size: 18px;
+        font-size: 25px;
         margin-bottom: 5%;
+        font-weight: 800;
     }
 
     .index_temp .temp_bf_sub_tit {
-        font-size: 15px;
+        font-size: 14px;
         line-height: 1.4;
         margin-bottom: 2%;
     }
 
-    .index_temp .temp_bf_sub_tit {
-        font-size: 17px;
+    .index_temp .temp_bf_sub_tit span{
+        font-size: 18px;
     }
 
     .index_temp .temp_bf_txt{
-        font-size: 9px;
+        display: none;
+        font-size: 10px;
         line-height: 1.2;
-        font-weight: 100;
+        font-weight: 200;
     }
-
 
     .index_temp .temp_welcome_wrap{
-        height: 10%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 10px;
+        height: 15%;
+        font-size: 16px;
+        font-weight: 800;
+        position: relative;
+        overflow: hidden;
     }
 
+    .index_temp .temp_welcome_wrap p{
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    
     .index_temp .temp_tw_wrap{
-        background: url(../images/bg1.jpg) no-repeat center/cover;
-        height: 60%;
+        background: url(../images/bg1.jpg) no-repeat center bottom/160%;
+        height: 50%;
         position: relative;
     }
 
@@ -887,7 +969,7 @@ body {
 
     .index_temp .temp_tw_tit{
         position: absolute;
-        top: 50%;
+        top: 55%;
         left: 50%;
         transform: translate(-50%,-50%);
         width: 100%;
@@ -895,7 +977,15 @@ body {
         font-size: 38px;
         line-height: 1.4;
         font-weight: bold;
-        text-shadow: 0px 0px 5px #fff;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+        opacity: 0;
+        transition: .4s;
+    }
+
+    .index_temp .temp_tw_tit.active{
+        opacity: 1;
+        top: 50%;
     }
 
     .index_temp .temp_right_tit{
@@ -906,9 +996,11 @@ body {
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+        color: #fff;
     }
 
     .index_temp .temp_sns_wrap{
         padding: 5%;
     }
+    
 }

@@ -49,6 +49,15 @@ $(document).ready(function (e) {
 	// 	  })
 	// }
 
+
+	$(".circle_wrap").click(function () {
+        $("#wrap").animate({
+            scrollTop: 0
+        }, 800, "easeOutSine");
+        pno = 0;
+    }); //////// top 버튼 클릭 ///////
+
+
 	if (mob) {
 		$(".mob_menu_btn").click(function () {
 			$(".mob_menu_wrap").toggleClass('active');
@@ -68,12 +77,13 @@ $(document).ready(function (e) {
 		})
 
 
+		var itpos = $('.itpos').height();
 		$('#wrap').scroll(function () {
             var scTop = $(this).scrollTop();
 
             // 왼쪽 높이 구하기
             var lpos = $(".temp_sns_wrap").height();
-            console.log(lpos);
+            // console.log(lpos);
 
             // 로고 기준선 액션 ///
             if (scTop > lpos + 100) {
@@ -86,6 +96,22 @@ $(document).ready(function (e) {
             else {
                 $(".circle_wrap").attr("style", ""); //////// css ////////////
             }
+
+			if(scTop > itpos + 100){
+				$('.temp_tw_tit').addClass('active')
+			} else{
+				$('.temp_tw_tit').removeClass('active')
+			}
         }); /////////// 스크롤 ////////////
+
+
+		var swiper = new Swiper('.swiper-container', {
+			pagination: {
+			  el: '.swiper-pagination'
+			},
+		  });
+
 	}
+	
 }); ///////////제이쿼리 구역///////////
+
