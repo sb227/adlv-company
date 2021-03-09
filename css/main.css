@@ -11,6 +11,7 @@
 .mb_main_txt {
     display: none;
 }
+
 /* 영어 한글 탭 */
 
 /*0. 메인페이지*/
@@ -287,7 +288,7 @@
 
 .global_blod {
     font-weight: 800;
-    font-size: 1.8vmin;
+    font-size: 1.2em;
 }
 
 
@@ -414,7 +415,47 @@
 }
 
 @media only screen and (max-width:800px) {
-    .pc_main_txt{
+    #slide2 {
+        background: url(../images/bg2.jpg) no-repeat 55% 20%/cover;
+    }
+
+    .cont2{
+        background: url(../images/bg4.jpg) no-repeat 47% 50%/400%;
+    }
+
+    .index .mob_menu_btn {
+        display: none;
+    }
+
+    .index .circle_wrap span {
+        display: none;
+    }
+
+    .index .mob_menu_wrap {
+        z-index: 100000000000;
+    }
+
+    .index .mob_menu_bg {
+        display: none !important;
+    }
+
+    .index .mob_menu_area {
+        background: transparent !important;
+    }
+
+    .index .mob_menu_area .gnb_wrap {
+        right: 10%;
+        left: auto;
+        text-align: right;
+        width: auto;
+    }
+
+
+    .index .sub_gnb_wrap {
+        width: auto;
+    }
+
+    .pc_main_txt {
         display: none;
     }
 
@@ -474,6 +515,7 @@
     .main_content_text {
         padding-top: 10%;
         font-size: 1.5em;
+        color: #333;
     }
 
     .main_content_text_wrap {
@@ -493,7 +535,7 @@
     .second .main_content_text,
     .third .main_content_text,
     .fourth .main_content_text {
-        font-size: 1em;
+        font-size: 1.055em;
     }
 
     .third.main_content_wrap,
@@ -572,7 +614,7 @@
     }
 
     .main_content_text {
-        font-size: 1em;
+        font-size: 1.1em;
     }
 
     .second .main_cont_img_wrap {

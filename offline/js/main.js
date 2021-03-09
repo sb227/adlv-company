@@ -96,6 +96,7 @@ $(function (e) { ///////////////// JQB //////////////////////
   var kor_locations1 = [
     ['청담 SHOW ROOM', 'Cheongdam showroom<br>34, Seolleung-ro 152-gil, Gangnam-gu, Seoul, Republic of Korea', '+82(0)2-512-7894', 'MON - SUN 11:00 - 20:00'],
     ['롯데백화점 본점 7F', 'Lotte department sotre myeongsong<br>81, Namdaemun-ro, Jung-gu, Seoul, Republic of Korea', '+82(0)2-772-3765', 'MON - THU 10:30 - 20:00 <br> FRI - SUN 10:30 - 20:30'],
+    ['롯데백화점 부산점 7F', 'Lotte department sotre busan<br>772, Gaya-daero, Busanjin-gu, Busan, Republic of Korea', '+82(0)51-810-3776','MON - THU 10:30 - 20:00 <br> FRI - SUN 10:30 - 20:30'],
     ['신세계백화점 스타필드 하남점 3F', 'Shinsegae department store hanam starfield<br>750, Misa-daero, Hanam-si, Gyeonggi-do, Republic of Korea', '031-8072-1665', 'MON - THU 11:00 - 20:00<br>FRI - SUN 11:00 - 21:00'],
     ['신세계백화점 대구점 6F', 'Shinsegae department store daegu<br>149, Dongbu-ro, Dong-gu, Daegu, Republic of Korea', '053-661-6670', 'MON - THU 11:00 - 20:00<br>FRI - SUN 11:00 - 20:30'],
   ];
@@ -192,6 +193,7 @@ function initMap() { /// 지도 보여주는 함수 //////////////////
   var total_locations = [
     ['청담 SHOW ROOM', 37.52445302234015, 127.04235101146038, '+82(0)2-512-7894', 'MON - SUN 11:00 - 20:00'],
     ['롯데백화점 본점 7F', 37.56517737513197, 126.98135826913165, '+82(0)2-772-3765', 'MON - THU 10:30 - 20:00', "FRI - SUN 10:30 - 20:30"],
+    ['롯데백화점 부산 본점 7F', 35.15805565894189, 129.05633932576913, '+82(0)51-810-3776','MON - THU 10:30 - 20:00 <br> FRI - SUN 10:30 - 20:30'],
     ['롯데면세점 소공본점 9F', 37.56838171939088, 126.98145874519447, '+82-2-759-6732', 'MON - SUN 09:30 - 21:00'],
     ['신세계면세점 소공본점 9F', 37.5675942370541, 126.98081235595221, '02-6370-4347', 'MON - SUN 09:00 - 20:30'],
     ['현대면세점 동대문점 9F', 37.574316222499945, 127.00714131884084, '02-3668-8182', 'MON - SUN 10:30 - 23:00'],

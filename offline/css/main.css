@@ -250,14 +250,19 @@
 }
 
 
+
+
+.kor_shop .shop_wrap:last-child {
+    margin-right: auto;
+    margin-left: 2%;
+}
+
 @media all and (max-width:768px) {
-    .duty_shop .shop_wrap:last-child {
+    .kor_shop .shop_wrap:last-child, .duty_shop .shop_wrap:last-child {
         margin-right: 0;
         margin-left: 0;
     }
 }
-
-
 /*********************** 25 추가 ************************************/
 
 

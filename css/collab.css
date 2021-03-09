@@ -150,6 +150,7 @@
     }
 
     .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+
         left: 0;
         transform: scale(.5);
     }
@@ -164,6 +165,10 @@
         margin-top: 10%;
     }
 
+    .mob_swiper .swiper-button-next, .mob_swiper .swiper-button-prev{
+        display: none;
+    }
+    
     .collab .inbox{
         display: flex;
         flex-wrap: wrap;

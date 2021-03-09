@@ -48,21 +48,21 @@
 }
 
 .bf_tit{
-    font-size: 8vmin;
+    font-size: 2.7em;
     font-weight: 600;
 }
 
 .bf_sub_tit{
-    font-size: 4vmin;
+    font-size: 2em;
 }
 
 .bf_sub_tit span{
-    font-size: 4.5vmin;
+    font-size: 1.5em;
 }
 
 .bf_txt{
     padding-top: 2%;
-    font-size: 2vmin;
+    font-size: 1em;
 }
 
 .bf_link{
@@ -86,6 +86,25 @@
 
 
 @media only screen and (max-width:800px){
+    .bf_tit{
+        font-size: 1.5em;
+        margin-bottom: 5%;
+    }
+    
+    .bf_sub_tit{
+        font-size: 0.9em;
+    }
+    
+    .bf_sub_tit span{
+        font-size: 1.2em;
+    }
+    
+    .bf_txt{
+        font-size: 0.9em;
+    }
+
+
+
     .indicator_wrap{
         display: none;
     }
