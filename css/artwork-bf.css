@@ -142,7 +142,7 @@
     }
 
     .artwork #page3{
-        animation: bg3 3s infinite alternate ease-in-out;
+        animation: bg3 1.5s infinite alternate ease-in-out;
     }
 
     @keyframes bg1{
