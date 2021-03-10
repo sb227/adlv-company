@@ -121,7 +121,7 @@
         display: none;
     }
 
-    /* .artwork #page1{
+    .artwork #page1{
         background: url(../images/bf_bg.jpg) no-repeat 50% bottom/300%;
     }
 
@@ -131,64 +131,8 @@
 
     .artwork #page3{
         background: url(../images/logoplay_bg.jpg) no-repeat 50% 20%/cover;
-    } */
-
-    .artwork #page1{
-        animation: bg1 7s infinite alternate  ease-in-out;
     }
-
-    .artwork #page2{
-        animation: bg2 7s infinite alternate ease-in-out;
-    }
-
-    .artwork #page3{
-        animation: bg3 1.5s infinite alternate ease-in-out;
-    }
-
-    @keyframes bg1{
-        0%{
-            background: url(../images/artwork-bf/bf_bg.jpg) no-repeat 54% 75%/600%;
-        }
-        35%{
-            background: url(../images/artwork-bf/bf_bg.jpg) no-repeat 64% 90%/600%;
-        }
-        65%{
-            background: url(../images/artwork-bf/bf_bg.jpg) no-repeat 40% 90%/600%;
-        }
-        100%{
-            background: url(../images/artwork-bf/bf_bg.jpg) no-repeat 64% 80%/600%;
-        }
-    }
-
-    @keyframes bg2{
-        0%{
-            background: url(../images/artwork-bf/artwork_bg.jpg) no-repeat top left/180%;
-        }
-        35%{
-            background: url(../images/artwork-bf/artwork_bg.jpg) no-repeat bottom right/180%;
-        }
-        65%{
-            background: url(../images/artwork-bf/artwork_bg.jpg) no-repeat bottom left/180%;
-        }
-        100%{
-            background: url(../images/artwork-bf/artwork_bg.jpg) no-repeat top right/180%;
-        }
-    }
-
-    @keyframes bg3{
-        0%{
-            background: url(../images/artwork-bf/logoplay_bg.jpg) no-repeat center/400%;
-        }
-        100%{
-            background: url(../images/artwork-bf/logoplay_bg.jpg) no-repeat center/450%;
-        }
-    }
-
-
-
-
-
-
+   
     .bf_cont_wrap{
         width: 80%;
     }

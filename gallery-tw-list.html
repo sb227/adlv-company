@@ -1,68 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>아크메드라비</title>
-	<link href="css/artwork-bf.css" rel="stylesheet">
+	<link href="css/gallery.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/common.js"></script>
+	<script src="js/gallery-list.js"></script>
 </head>
 
 <body>
-	<div id="wrap">
+	<div id="wrap" class="gallery">
 		<!--페이지 공통-->
 		<div class="fixed_wrap">
 			<header class="header_wrap">
 				<div class="header_left">
 					<h1 class="header_logo">
-						<a href="/">
+						<a href="index.html">
 							<img src="images/images_adlv/logo_white_2.png" alt="로고" class="white">
 							<img src="images/images_adlv/logo_black_2.png" alt="로고" class="black">
 						</a>
 					</h1>
 					<ul class="gnb_wrap">
 						<li>
-							<a href="#">STORY</a>
+							<a href="gallery-tw-list.html">TWICE</a>
 							<ul class="sub_gnb_wrap">
-								<li><a href="slogan.html">SLOGAN</a></li>
-								<li><a href="brand.html">BRAND STORY</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">COLLECTION</a>
-							<ul class="sub_gnb_wrap">
-								<li><a href="gallery-list.html">VIEW ALL</a></li>
+								<li><a href="gallery-tw-list.html">VIEW ALL</a></li>
 								<li><a href="gallery-21twss.html">2021 TWICE S/S</a></li>
 								<li><a href="gallery-20twfw.html">2020 TWICE F/W</a></li>
 								<li><a href="gallery-20twss.html">2020 TWICE S/S</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="gallery-list.html">COLLECTION</a>
+							<ul class="sub_gnb_wrap">
+								<li><a href="gallery-list.html">VIEW ALL</a></li>
 								<li><a href="gallery-berlin.html">BERLIN</a></li>
 								<li><a href="gallery-london.html">London</a></li>
 								<li><a href="gallery-paju.html">PAJU</a></li>
 							</ul>
 						</li>
 						<li>
-							<a href="#">PROJECTS</a>
+							<a href="artwork-scroll.html">PROJECTS</a>
 							<ul class="sub_gnb_wrap">
+								<li><a href="artwork-scroll.html">ADLV ORIGINAL LINE</a></li>
 								<li><a href="collab.html">COLLABORATION</a></li>
-								<li><a href="artwork.html">ADLV ORIGINAL LINE</a></li>
+							</ul>
+						</li>
+						<li class="cate_brand">
+							<a onclick="alert('COMING SOON !')">BRAND</a>
+							<ul class="sub_gnb_wrap">
+								<li><a onclick="alert('COMING SOON !')">COMING SOON</a></li>
 							</ul>
 						</li>
 						<li>
-							<a href="#">BRAND</a>
-							<ul class="sub_gnb_wrap">
-								<li><a href="#">COMING SOON</a></li>
-							</ul>
+							<a href="offline/index.html">OFFLINE</a>
+						</li>
+						<li>
+							<a href="global.html">GLOBAL</a>
 						</li>
 					</ul>
 				</div>
 				<div class="header_right">
-					<a href="https://acmedelavie.com/" target="_blank">GO TO STORE</a>
+					<a href="https://acmedelavie.com/" target="_blank" class="store_mob">GO TO STORE</a>
 					<div class="mob_menu_btn">
 						<img src="images/icon_bar_white.png" alt="menu" class="white">
 						<img src="images/icon_bar_black.png" alt="menu" class="black">
@@ -73,76 +79,96 @@
 				<div class="circle"></div>
 				<span>TOP</span>
 			</div>
+
 			<div class="mob_menu_wrap">
 				<span class="mob_menu_bg"></span>
 				<div class="mob_menu_area">
 					<ul class="gnb_wrap">
 						<li>
-							<a href="#">STORY</a>
+							<h2>TWICE</h2>
 							<ul class="sub_gnb_wrap">
-								<li><a href="slogan.html">SLOGAN</a></li>
-								<li><a href="brand.html">BRAND STORY</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">COLLECTION</a>
-							<ul class="sub_gnb_wrap">
-								<li><a href="gallery-list.html">VIEW ALL</a></li>
+								<li><a href="gallery-tw-list.html">VIEW ALL</a></li>
 								<li><a href="gallery-21twss.html">2021 TWICE S/S</a></li>
 								<li><a href="gallery-20twfw.html">2020 TWICE F/W</a></li>
 								<li><a href="gallery-20twss.html">2020 TWICE S/S</a></li>
+							</ul>
+						</li>
+						<li>
+							<h2>COLLECTION</h2>
+							<ul class="sub_gnb_wrap">
+								<li><a href="gallery-list.html">VIEW ALL</a></li>
 								<li><a href="gallery-berlin.html">BERLIN</a></li>
 								<li><a href="gallery-london.html">London</a></li>
 								<li><a href="gallery-paju.html">PAJU</a></li>
 							</ul>
 						</li>
 						<li>
-							<a href="#">PROJECTS</a>
+							<h2>PROJECTS</h2>
 							<ul class="sub_gnb_wrap">
+								<li><a href="artwork-scroll.html">ADLV ORIGINAL LINE</a></li>
 								<li><a href="collab.html">COLLABORATION</a></li>
-								<li><a href="artwork.html">ADLV ORIGINAL LINE</a></li>
 							</ul>
 						</li>
 						<li>
-							<a href="#">brand</a>
-							<ul class="sub_gnb_wrap">
-								<li><a href="#">COMING SOON</a></li>
-							</ul>
+							<a onclick="alert('COMING SOON !')">BRAND</a>
 						</li>
-						<li><a href="https://acmedelavie.com/">GO TO STORE</a></li>
+						<li>
+							<a href="offline/index.html">OFFLINE</a>
+						</li>
+						<li>
+							<a href="global.html">GLOBAL</a>
+						</li>
+						<li>
+							<a href="https://acmedelavie.com/" target="_blank">GO TO STORE</a>
+						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		
-		<!-- bf 영역 시작 -->
-		<div class="page cont1" id="page1">
-			<div class="vid_box">
-				<span></span>
-				<iframe src="https://www.youtube.com/embed/2irWQF2G9j4?controls=0&autoplay=1&mute=1&loop=1&playlist=2irWQF2G9j4&modestbranding=1&vq=hd1080"" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="gallery_wrap">
+			<div class="gallery_area">
+				<ul class="gallery_list_info_wrap">
+					<li>
+						<a href="gallery-21twss.html">
+							<img src="images/lookbook/thumb/thumb_21ss_tw.jpg">
+							<p class="gallery_info_tit">2021 S/S WITH TWICE</p>
+						</a>
+					</li>
+					<li>
+						<a href="gallery-20twfw.html">
+							<img src="images/lookbook/thumb/thumb_20fw_tw.jpg">
+							<p class="gallery_info_tit">2020 F/W WITH TWICE</p>
+						</a>
+					</li>
+					<li>
+						<a href="gallery-20twss.html">
+							<img src="images/lookbook/thumb/thumb_20ss_tw.jpg">
+							<p class="gallery_info_tit">2020 S/S WITH TWICE</p>
+						</a>
+					</li>
+				</ul>
+				<ul class="gallery_list_wrap">
+					<li>
+						<a href="gallery-21twss.html">
+							2021 S/S WITH TWICE
+						</a>
+					</li>
+					<li>
+						<a href="gallery-20twfw.html">
+							2020 F/W WITH TWICE
+						</a>
+					</li>
+					<li>
+						<a href="gallery-20twss.html">
+							2020 S/S WITH TWICE
+						</a>
+					</li>
+				</ul>
 			</div>
-			<section class="inbox clb">
-				<div class="bf_cont_wrap">
-					<h1 class="bf_tit">BABYFACE</h1>
-					<h3 class="bf_sub_tit">climax of youth & ACME<br><span>FACE OF EMOTION / SOUL / SPIRIT</span></h3>
-					<p class="bf_txt">
-						국적과 언어의 장벽을 넘어 보는 순간 심장을 건드리는 다양한 표정과 감정
-						<br>
-						그 얼굴을 가슴에 담은 아크메드라비의 시그니처 라인업
-						<br>
-						메가사이즈로 프린트된 다양한 베이비페이스들은 지금도 계속 새롭게 선보이고 있습니다.
-						<a href="https://acmedelavie.com/category/adlv-baby-face/70/" target="_blank" class="bf_link">go to store</a>
-					</p>
-				</div>
-			</section>
 		</div>
-		<!-- bf 영역 끝 -->
-
-
-		
 
 		<!--3. 푸터영역 -->
-		<div class="cont4" id="page5">
+		<div class="cont4" id="footer">
 			<section class="inbox" id="cont4">
 				<div class="footer_left">
 					<ul class="footer_terms">
@@ -157,7 +183,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="/collabinfo/guide.html">
+							<a href="/shopinfo/guide.html">
 								GUIDE
 							</a>
 						</li>
@@ -211,7 +237,6 @@
 				</div>
 			</section>
 		</div>
-
 	</div>
 </body>
 

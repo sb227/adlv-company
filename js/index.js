@@ -33,21 +33,21 @@ $(document).ready(function (e) {
 		}, 1000);
 	}, 3000); ////////// 슬라이드 돌아 ////////////
 
-	// if(mob){
-	//     $(".mob_menu_btn").click(function(){
-	//         $(".mob_menu_wrap").toggleClass('active');
-	//         $(".mob_menu_btn").toggleClass('active');
-	//     }); /////////// click ///////////
+	if(mob){
+	    $(".mob_menu_btn").click(function(){
+	        $(".mob_menu_wrap").toggleClass('active');
+	        $(".mob_menu_btn").toggleClass('active');
+	    }); /////////// click ///////////
 
-	// 	$('.mob_menu_area li').click(function(){
-	//         $(this).find('.sub_gnb_wrap').toggleClass('active');
-	//     }); /////// click ////////////
+		$('.mob_menu_area li').click(function(){
+	        $(this).find('.sub_gnb_wrap').toggleClass('active');
+	    }); /////// click ////////////
 
-	// 	$('.mob_menu_bg').click(function(){
-	// 		$(".mob_menu_wrap").toggleClass('active');
-	// 		$(".mob_menu_btn").toggleClass('active');
-	// 	  })
-	// }
+		$('.mob_menu_bg').click(function(){
+			$(".mob_menu_wrap").toggleClass('active');
+			$(".mob_menu_btn").toggleClass('active');
+		  })
+	}
 
 
 	$(".circle_wrap").click(function () {
@@ -58,60 +58,60 @@ $(document).ready(function (e) {
     }); //////// top 버튼 클릭 ///////
 
 
-	if (mob) {
-		$(".mob_menu_btn").click(function () {
-			$(".mob_menu_wrap").toggleClass('active');
-			$(".mob_menu_btn").toggleClass('active');
-			$(".header_wrap").toggleClass('active');
-			$(".fixed_wrap").toggleClass('on');
+	// if (mob) {
+	// 	$(".mob_menu_btn").click(function () {
+	// 		$(".mob_menu_wrap").toggleClass('active');
+	// 		$(".mob_menu_btn").toggleClass('active');
+	// 		$(".header_wrap").toggleClass('active');
+	// 		$(".fixed_wrap").toggleClass('on');
 
-		}); /////////// click ///////////
+	// 	}); /////////// click ///////////
 
-		$('.mob_menu_area li').click(function () {
-			$(this).find('.sub_gnb_wrap').toggleClass('active');
-		}); /////// click ////////////
+	// 	$('.mob_menu_area li').click(function () {
+	// 		$(this).find('.sub_gnb_wrap').toggleClass('active');
+	// 	}); /////// click ////////////
 
-		$('.mob_menu_bg').click(function () {
-			$(".mob_menu_wrap").toggleClass('active');
-			$(".mob_menu_btn").toggleClass('active');
-		})
-
-
-		var itpos = $('.itpos').height();
-		$('#wrap').scroll(function () {
-            var scTop = $(this).scrollTop();
-
-            // 왼쪽 높이 구하기
-            var lpos = $(".temp_sns_wrap").height();
-            // console.log(lpos);
-
-            // 로고 기준선 액션 ///
-            if (scTop > lpos + 100) {
-                //console.log("하이하이" + $("#show_right").offset().top);
-                $(".circle_wrap").css({
-                    position: "fixed",
-                    bottom: "20%"
-                }); //////// css ////////////
-            } /////// if ///////////
-            else {
-                $(".circle_wrap").attr("style", ""); //////// css ////////////
-            }
-
-			if(scTop > itpos + 100){
-				$('.temp_tw_tit').addClass('active')
-			} else{
-				$('.temp_tw_tit').removeClass('active')
-			}
-        }); /////////// 스크롤 ////////////
+	// 	$('.mob_menu_bg').click(function () {
+	// 		$(".mob_menu_wrap").toggleClass('active');
+	// 		$(".mob_menu_btn").toggleClass('active');
+	// 	})
 
 
-		var swiper = new Swiper('.swiper-container', {
-			pagination: {
-			  el: '.swiper-pagination'
-			},
-		  });
+	// 	var itpos = $('.itpos').height();
+	// 	$('#wrap').scroll(function () {
+    //         var scTop = $(this).scrollTop();
 
-	}
+    //         // 왼쪽 높이 구하기
+    //         var lpos = $(".temp_sns_wrap").height();
+    //         // console.log(lpos);
+
+    //         // 로고 기준선 액션 ///
+    //         if (scTop > lpos + 100) {
+    //             //console.log("하이하이" + $("#show_right").offset().top);
+    //             $(".circle_wrap").css({
+    //                 position: "fixed",
+    //                 bottom: "20%"
+    //             }); //////// css ////////////
+    //         } /////// if ///////////
+    //         else {
+    //             $(".circle_wrap").attr("style", ""); //////// css ////////////
+    //         }
+
+	// 		if(scTop > itpos + 100){
+	// 			$('.temp_tw_tit').addClass('active')
+	// 		} else{
+	// 			$('.temp_tw_tit').removeClass('active')
+	// 		}
+    //     }); /////////// 스크롤 ////////////
+
+
+	// 	var swiper = new Swiper('.swiper-container', {
+	// 		pagination: {
+	// 		  el: '.swiper-pagination'
+	// 		},
+	// 	  });
+
+	// }
 	
 }); ///////////제이쿼리 구역///////////
 
