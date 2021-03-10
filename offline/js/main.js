@@ -70,6 +70,11 @@ $(function (e) { ///////////////// JQB //////////////////////
     alert('아크메드라비 신세계백화점 대구점 전화번호가 복사되었습니다!');
   });
 
+  $(".call_5").click(function () {
+    copyToClipboard('051-810-3776');
+    alert('아크메드라비 롯데백화점 부산 전화번호가 복사되었습니다!');
+  });
+
 
   var swiper = new Swiper('.swiper-container', {
     navigation: {

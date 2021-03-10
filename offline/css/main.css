@@ -44,6 +44,15 @@
     justify-content: center;
 }
 
+.call_list.pc{
+    display: flex;
+}
+
+.call_list.mb{
+    display: none;
+}
+
+
 .call_list li {
     margin: 0 20px;
     border: 1px solid #000;
@@ -302,6 +311,14 @@
 
     .shop_wrap:last-child {
         margin-right: 0;
+    }
+
+    .call_list.pc{
+        display: none;
+    }
+    
+    .call_list.mb{
+        display: flex;
     }
 }
 
